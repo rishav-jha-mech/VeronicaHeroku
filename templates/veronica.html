@@ -1,0 +1,1618 @@
+{% extends 'base.html' %} 
+
+{% block title %} 
+Veronica Scrap Website
+{% endblock title %}
+
+
+
+
+{% block outstyle %}
+
+  <style>
+  @media(max-width:880px){
+    .active{
+    color: chartreuse !important;   
+}
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*CUSTOM SCROLLBAR CSS FROM W3 SCHOOLS*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*CUSTOM SCROLLBAR CSS FROM W3 SCHOOLS*/
+
+/*To all Anchor Tags
+
+    background: url(https://i.pinimg.com/originals/fe/c6/6d/fec66d649cb60a673fc9bee52380c3b1.gif);
+    https://i.pinimg.com/originals/7d/3d/f2/7d3df21a320ecac33bfedce6d85ec42c.gif
+*/
+::-webkit-scrollbar{
+  scroll-behavior: smooth !important;
+}
+@media(max-width:425px){ 
+  .main {
+    min-height: 100vh;
+    background-position: center;
+    background: url(https://i.pinimg.com/originals/7d/3d/f2/7d3df21a320ecac33bfedce6d85ec42c.gif);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.300); 
+  }
+  .make h1,.result h1{
+    color: white !important;
+  }
+  .make h2, .result h2 {
+    color: aqua !important;
+    margin-bottom: 20px !important;
+  } 
+  .form-check-label {
+    color: white;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+.result{
+  height: 775.88px;
+  padding: 20px;
+}
+  .result .results{
+    background: transparent !important;
+    margin-top: 25px;
+    border: none;
+    box-shadow: 0 0 2px 2px rgba(0, 255, 255, 0.404);
+    font-size: 14px;
+    text-overflow: clip;
+  }
+  .forum{
+    flex-direction: column;
+  }
+  .forum input{
+    margin-bottom: 16px;
+  }
+  
+.make .forum {
+  display: flex;
+  margin-bottom: 40px;
+}
+.make .forum input {
+  width: 100%;
+  outline: none;
+  margin-top: 25px;
+  padding: 10px 10px 10px 10px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  color: aqua;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.make .forum input::placeholder{
+  color: rgba(0, 255, 255, 0.859);
+}
+
+.make .forum button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: none;
+  background-color: none;
+  background: rgba(0, 0, 0, 0.397) !important;
+  border: 0.8px solid rgba(0, 255, 255, 0.397) !important;
+  font-size: 16px  !important;
+  font-weight: 500 !important;
+  letter-spacing: 2px;
+  }
+.form-check-input:checked {
+  background-color: rgb(39, 39, 255) !important;
+  border-color: rgb(39, 39, 255) !important;
+}
+.form-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem aqua !important;
+}
+.form-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem aqua !important;
+}
+
+.form-check-input[type="checkbox"]:indeterminate {
+  background-color: rgb(39, 39, 255) !important;
+  border-color: rgb(39, 39, 255) !important;
+}
+
+.result button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px 10px 25px;
+  outline: none;
+  background-color: none;
+  background-image: none;
+  background: black !important;
+  border: 0.8px solid rgba(0, 255, 255, 0.397) !important;
+  border: 0.8px solid aqua;
+  color: white;
+  font-size: 16px !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.form-switch .form-check-input {
+  background-color: white;
+}
+}
+
+a {
+  text-decoration: none;
+  color: thistle;
+}
+
+.main {
+  min-height: 100vh;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3% 10% 3% 10%;
+}
+.make {
+  min-height: 775.88px;
+  padding: 35px;
+  margin: 20px;
+  width: 100%;
+  box-shadow: 0 0 8px 5px #b421fe4b;
+  padding-bottom: 30px;
+}
+.result{
+  min-height: 775.88px;
+  padding: 35px;
+  margin: 20px;
+  width: 100%;
+  box-shadow: 0 0 8px 5px #b421fe4b;
+  word-wrap: break-word;
+}
+.main h1 {
+  padding-top: 10px;
+  padding-bottom: 45px;
+  color: #b621fe;
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.22);
+}
+.make h2 {
+  font-weight: 500;
+  font-size: 25px;
+  color: #b621fe;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.22);
+}
+.make .forum {
+  display: flex;
+  margin-bottom: 40px;
+}
+.make .forum input {
+  width: 100%;
+  padding: 10px 25px 10px 25px;
+  outline: none;
+  margin-right: 10px;
+}
+.make .forum button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px 10px 25px;
+  outline: none;
+  background-color: #1fd1f9;
+  border-radius: 7px;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+/*FORM CHECK SWITCHES IMPORTED FROM BOOTSTRP CSS*/
+.form-check .form-check-input {
+  float: left;
+  margin-left: -1.5em;
+}
+.form-check-input {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}
+.form-check-input[type="checkbox"] {
+  border-radius: 0.25em;
+}
+.form-check-input[type="radio"] {
+  border-radius: 50%;
+  padding: 10px;
+}
+.form-check-input:active {
+  filter: brightness(90%);
+}
+.form-check-input:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-check-input:checked {
+  background-color: #b621fe;
+  border-color: #b621fe;
+}
+.form-check-input:checked[type="checkbox"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+.form-check-input:checked[type="radio"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}
+.form-check-input[type="checkbox"]:indeterminate {
+  background-color: #b621fe;
+  border-color: #b621fe;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+.form-check-input:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+.form-check-input:disabled ~ .form-check-label,
+.form-check-input[disabled] ~ .form-check-label {
+  opacity: 0.5;
+}
+.form-switch {
+  padding-left: 2.5em;
+}
+.form-switch .form-check-input {
+  width: 2em;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+  background-position: left center;
+  border-radius: 2em;
+  transition: background-position 0.15s ease-in-out;
+
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-switch .form-check-input {
+    transition: none;
+  }
+}
+.form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+}
+.form-switch .form-check-input:checked {
+  background-position: right center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+.form-check-inline {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.btn-check:disabled + .btn,
+.btn-check[disabled] + .btn {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.65;
+}
+.form-range {
+  width: 100%;
+  height: 1.5rem;
+  padding: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.form-range:focus {
+  outline: 0;
+}
+.form-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-range::-moz-focus-outer {
+  border: 0;
+}
+.form-check-input {
+  clear: left;
+}
+
+.form-switch.form-switch-sm {
+  margin-bottom: 0.5rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-sm .form-check-input {
+  height: 1rem;
+  width: calc(1rem + 0.75rem);
+  border-radius: 2rem;
+}
+
+.form-switch.form-switch-md {
+  margin-bottom: 1rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-md .form-check-input {
+  height: 1.5rem;
+  width: calc(2rem + 0.75rem);
+  border-radius: 3rem;
+}
+
+.form-switch.form-switch-lg {
+  margin-bottom: 1.5rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-lg .form-check-input {
+  height: 2rem;
+  width: calc(3rem + 0.75rem);
+  border-radius: 4rem;
+}
+
+.form-switch.form-switch-xl {
+  margin-bottom: 2rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-xl .form-check-input {
+  height: 2.5rem;
+  width: calc(4rem + 0.75rem);
+  border-radius: 5rem;
+}
+
+/*FORM CHECK SWITCHES IMPORTED FROM BOOTSTRP CSS*/
+.col{
+  display: flex;
+  width: 45%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.col1{
+  margin-right: 8px;
+}
+.col2{
+  margin-left: 8px;
+}
+.table{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media(max-width:425px){
+  .col{
+    border-top: 1px solid rgba(0, 255, 255, 0.363);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.363);
+  }
+}
+@media(max-width:900px){
+  .table{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+    padding-top: 20px;
+  }
+  .col1{
+    margin: 0;
+  }
+  .col2{
+    margin: 0;
+  }
+}
+.form-check-input{
+  margin-right: 10px;
+}
+.form-check-label{
+  font-weight: 600;
+}
+.result h1{
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.22);
+}
+.result h2 {
+  font-weight: 500;
+  font-size: 25px;
+  color: #b621fe;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.22);
+  text-transform: capitalize;
+  margin-bottom: 50px;
+}
+.result .results{
+  width:  100%;
+  outline: none;
+  height: auto;
+  background:rgba(255, 230, 230, 1);
+  word-wrap: break-word;
+}
+.result button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px 10px 25px;
+  outline: none;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.result .alignright{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 5px;
+  padding-right: 10px;
+  margin-bottom: 18px;
+}
+@media(max-width:1200px){
+  .main{
+    flex-direction: column;
+  }
+  .make{
+    width: 100%;
+    box-shadow: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.062);
+    height: auto;
+  }
+  .result{
+    width: 100%;
+    box-shadow: none;
+    height: auto;
+  }
+}
+@media(max-width:600px){
+  .make h1,.result h1{
+    font-size: 40px;
+    text-shadow: none;
+    font-weight: 800;
+    text-align: center;
+  }
+  .make h2, .result h2 {
+    font-size: 20px;
+    text-align: center;
+  } 
+  .result h1{
+    letter-spacing: 5px;
+    font-size: 50px;
+    font-weight: 700;
+  }
+}
+@media(max-width:400px){
+
+.make .forum button {
+  padding: 10px 25px 10px 25px;
+  color: white;
+  border-radius: 6px;
+}
+  .make{
+    padding-top: 12px;
+    padding-left:  15px;
+    padding-right: 15px;
+  }
+  .result{
+    padding-top: 12px;
+    padding-left:  15px;
+    padding-right: 15px;
+  }
+}
+@media(max-width:527px){
+  .block2{
+    display: block;
+  }
+  .make h1,.result h1{
+    font-size: 45px;
+
+  }
+}
+@media(max-width:810px){
+  #block1{
+    display: none;
+  }
+}
+@media(max-width:470px){
+  #block1{
+    display: none;
+  }
+}
+@media(max-width:335px){
+  #block1{
+    display: none;
+  }
+}
+
+@media(max-width:880px){
+   .navbar .inner .navLinks a{
+        margin-bottom: 50px;
+        color: aqua;
+        font-weight: 700;
+        font-size: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .navbar .inner .navLinks a:hover{
+        color: chartreuse;
+    }   
+    @media(max-width:425px){
+      .table{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+#nav_links{
+  display:none;
+}
+}
+#block1{
+  display:none;
+}
+
+  .abr{
+    color: #ff156f;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .form-check-label{
+    text-transform: capitalize ;
+  }
+@media(max-width:550px)
+{
+  .make{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media(max-width:425px){
+  .make{
+    padding-left:  8px;
+    padding-right: 8px;
+  }
+}
+@media(max-width:425px){
+  .abr{
+    color: #5656ff;
+    font-size: 10px;
+  }  
+  .table{
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media(max-width:425px){
+  .main{
+    margin: 0px !important;
+  }
+}
+@media(max-width:1000px){
+    .main{
+      margin: 2% ;
+    }
+}
+/*------------------------------------------------------------------------RESULT PAGE INNER CSS----------------------------------------------------------------------------------------------*/
+
+
+@media(max-width:425px){
+  
+.h1,.h2,.h3,.h4,.h5,.h6,.p,.div,.image,.al,.an,.divtag,.alltag,.source,.html,.body,.class,.id,.b,.em,.u,.linksrc,.linktag,.stylesrc,.styletag,.scriptsrc,.scripttag{background: transparent !important;padding: 6px !important;}
+.h1c,.h2c,.h3c,.h4c,.h5c,.h6c,.pc,.divc,.imagec,.alc,.anc,.divtagc,.alltagc,.sourcec,.htmlc,.bodyc,.classc,.idc,.bc,.emc,.uc,.linksrcc,.linktagc,.stylesrcc,.styletagc,.scriptsrcc,.scripttagc{color: aqua !important;font-weight: 400 !important;}
+.h1a,.h2a,.h3a,.h4a,.h5a,.h6a,.pa,.diva,.imagea,.ala,.ana,.divtaga,.alltaga,.sourcea,.htmla,.bodya,.classa,.ida,.ba,.ema,.ua,.linksrca,.linktaga,.stylesrca,.styletaga,.scriptsrca,.scripttaga{background: transparent !important;}
+.h1 {margin: 20px 0 20px 0;}
+.h1a{color:      #fff1e1;background-color: #ed3572;}
+.h1b{color: aqua !important;font-weight: 400 !important;}
+.h1c{font-weight: 700;}
+
+.h2 {margin: 20px 0 20px 0;}
+.h2a{color:      #fffFFF;background-color: #077B8A;}
+.h2b{color: aqua !important; font-weight: 400 !important;}
+.h2c{font-weight: 700;}
+
+.h3 {margin: 20px 0 20px 0;}
+.h3a{color:      #fffFFF;background-color: #be1558;}
+.h3b{color: aqua !important;font-weight: 400 !important;}
+.h3c{font-weight: 700;}
+
+.h4 {margin: 20px 0 20px 0;}
+.h4a{color:      #fffFFF;background-color: #316879;}
+.h4b{color: aqua !important;font-weight: 400 !important;}
+.h4c{font-weight: 700;}
+
+.h5 {margin: 20px 0 20px 0;}
+.h5a{color:      #fffFFF;background-color: #be1558;}
+.h5b{color: aqua !important;font-weight: 400 !important;}
+.h5c{font-weight: 700;}
+
+.h6 {margin: 20px 0 20px 0;}
+.h6a{color:      #fffFFF;background-color: #d902ee;}
+.h6b{color: aqua !important;font-weight: 400 !important;}
+.h6c{font-weight: 700;}
+
+.p {margin: 20px 0 20px 0;}
+.pa{color:      #fffFFF;background-color: #1868ae;}
+.pb{color: aqua !important;font-weight: 400 !important;}
+.pc{font-weight: 700;}
+
+.an {margin: 20px 0 20px 0;}
+.ana{color:      #fffFFF;background-color: #4d5198;}
+.anb{color: aqua !important;font-weight: 400 !important;}
+.anc{font-weight: 700;}
+
+.al {margin: 20px 0 20px 0;}
+.ala{color:      #fffFFF;background-color: #315f72;}
+.alb{color: aqua !important;font-weight: 400 !important;}
+.alc{font-weight: 700;}
+
+.image {margin: 20px 0 20px 0;}
+.imagea{color:      #fffFFF;background-color: #500742;}
+.imageb{color: aqua !important;font-weight: 400 !important;}
+.imagec{font-weight: 700;}
+
+.div {margin: 20px 0 20px 0;}
+.diva{color:      #fffFFF;background-color: teal;}
+.divb{color: aqua !important;font-weight: 400 !important;}
+.divc{font-weight: 700;display: block;}
+
+
+.divtag {margin: 20px 0 20px 0;}
+.divtaga{color:      #fffFFF;background-color: crimson;}
+.divtagb{color: aqua !important;font-weight: 400 !important;}
+.divtagc{font-weight: 700;display: block;}
+
+
+.alltag {margin: 20px 0 20px 0;}
+.alltaga{color: azure;background: green;}
+.alltagb{color: aqua !important;font-weight: 400 !important;}
+.alltagc{font-weight: 700;}
+
+.source {margin: 20px 0 20px 0;}
+.sourcea{color: azure;background: darkmagenta;}
+.sourceb{color: aqua !important;font-weight: 400 !important;}
+.sourcec{font-weight: 700;}
+
+.html {margin: 20px 0 20px 0;}
+.htmla{color: azure;background: orangered;}
+.htmlb{color: aqua !important;font-weight: 400 !important;}
+.htmlc{font-weight: 700;}
+
+.body {margin: 20px 0 20px 0;}
+.bodya{color: azure;background: darkslategrey;}
+.bodyb{color: aqua !important;font-weight: 400 !important;}
+.bodyc{font-weight: 700;}
+
+.class {margin: 20px 0 20px 0;}
+.classa{color: azure;background: #00FF7F;}
+.classb{color: aqua !important;font-weight: 400 !important;}
+.classc{font-weight: 700;}
+
+.id {margin: 20px 0 20px 0;}
+.ida{color: azure;background: #551A8B;}
+.idb{color: aqua !important;font-weight: 400 !important;}
+.idc{font-weight: 700;}
+
+.b{margin: 20px 0 20px 0;}
+.ba{color: azure;background: #FF8247;}
+.bb{color: aqua !important;font-weight: 400 !important;}
+.bc{font-weight: 700;}
+
+.em{margin: 20px 0 20px 0;}
+.ema{color: azure;background: #FFA500;}
+.emb{color: aqua !important;font-weight: 400 !important;}
+.emc{font-weight: 700;}
+
+.u{margin: 20px 0 20px 0;}
+.ua{color: azure;background: 	#FF1493;}
+.ub{color: aqua !important;font-weight: 400 !important;}
+.uc{font-weight: 700;}
+
+.linksrc{margin: 20px 0 20px 0;}
+.linksrca{color: azure;background: #1E90FF;}
+.linksrcb{color: aqua !important;font-weight: 400 !important;}
+.linksrcc{font-weight: 700;}
+
+.linktag{margin: 20px 0 20px 0;}
+.linktaga{color: azure;background: #778899;}
+.linktagb{color: aqua !important;font-weight: 400 !important;}
+.linktagc{font-weight: 700;}
+
+.stylesrc{margin: 20px 0 20px 0;}
+.stylesrca{color: azure;background: #A52A2A;}
+.stylesrcb{color: aqua !important;font-weight: 400 !important;}
+.stylesrcc{font-weight: 700;}
+
+.styletag{margin: 20px 0 20px 0;}
+.styletaga{color: azure;background: #00CED1;}
+.styletagb{color: aqua !important;font-weight: 400 !important;}
+.styletagc{font-weight: 700;}
+
+.scriptsrc{margin: 20px 0 20px 0;}
+.scriptsrca{color: azure;background: 	#9400D3;}
+.scriptsrcb{color: aqua !important;font-weight: 400 !important;}
+.scriptsrcc{font-weight: 700;}
+
+.scripttag{padding: 10px 0 10px 0;}
+.scripttaga{color: azure;background: yellow;}
+.scripttagb{color: aqua !important;font-weight: 400 !important;}
+.scripttagc{font-weight: 700;}
+
+}
+.h1,.h2,.h3,.h4,.h5,.h6,.p,.div,.image,.al,.an{padding: 15px !important;}
+.h1a,.h2a,.h3a,.h4a,.h5a,.h6a,.pa,.diva,.imagea,.ala,.ana,.divtaga,.alltaga,.sourcea,.htmla,.bodya,.classa,.ida,.ba,.ema,.ua,.linksrca,.linktaga,.stylesrca,.styletaga,.scriptsrca,.scripttaga{padding: 10px 22px 10px 22px;border-radius: 10px;letter-spacing: 2px;text-transform: uppercase;}
+.h1c,.h2c,.h3c,.h4c,.h5c,.h6c,.pc,.divc,.imagec,.alc,.anc,.divtagc,.alltagc,.sourcec,.htmlc,.bodyc,.classc,.idc,.bc,.emc,.uc,.linksrcc,.linktagc,.stylesrcc,.styletagc,.scriptsrcc,.scripttagc{text-transform: uppercase;}
+
+.h1 {margin: 20px 0 20px 0;}
+.h1a{color:      #fff1e1;background-color: #ed3572;}
+.h1b{color:      #ed3572;}
+.h1c{font-weight: 700;}
+
+.h2 {margin: 20px 0 20px 0;}
+.h2a{color:      #fffFFF;background-color: #077B8A;}
+.h2b{color:      #077B8A;}
+.h2c{font-weight: 700;}
+
+.h3 {margin: 20px 0 20px 0;}
+.h3a{color:      #fffFFF;background-color: #be1558;}
+.h3b{color:      #be1558;}
+.h3c{font-weight: 700;}
+
+.h4 {margin: 20px 0 20px 0;}
+.h4a{color:      #fffFFF;background-color: #316879;}
+.h4b{color:      #316879;}
+.h4c{font-weight: 700;}
+
+.h5 {margin: 20px 0 20px 0;}
+.h5a{color:      #fffFFF;background-color: #be1558;}
+.h5b{color:      #be1558;}
+.h5c{font-weight: 700;}
+
+.h6 {margin: 20px 0 20px 0;}
+.h6a{color:      #fffFFF;background-color: #d902ee;}
+.h6b{color:      #d902ee;}
+.h6c{font-weight: 700;}
+
+.p {margin: 20px 0 20px 0;}
+.pa{color:      #fffFFF;background-color: #1868ae;}
+.pb{color:      #1868ae;}
+.pc{font-weight: 700;}
+
+.an {margin: 20px 0 20px 0;}
+.ana{color:      #fffFFF;background-color: #4d5198;}
+.anb{color:      #4d5198;}
+.anc{font-weight: 700;}
+
+.al {margin: 20px 0 20px 0;}
+.ala{color:      #fffFFF;background-color: #315f72;}
+.alb{color:      #315f72;}
+.alc{font-weight: 700;}
+
+.image {margin: 20px 0 20px 0;}
+.imagea{color:      #fffFFF;background-color: #500742;}
+.imageb{color:      #500742;}
+.imagec{font-weight: 700;}
+
+.div {margin: 20px 0 20px 0;}
+.diva{color:      #fffFFF;background-color: teal;}
+.divb{color:      teal;}
+.divc{font-weight: 700;display: block;}
+
+
+.divtag {margin: 20px 0 20px 0;}
+.divtaga{color:      #fffFFF;background-color: crimson;}
+.divtagb{color:      black;}
+.divtagc{font-weight: 700;display: block;}
+
+
+.alltag {margin: 20px 0 20px 0;}
+.alltaga{color: azure;background: green;}
+.alltagb{}
+.alltagc{font-weight: 700;}
+
+.source {margin: 20px 0 20px 0;}
+.sourcea{color: azure;background: darkmagenta;}
+.sourceb{}
+.sourcec{font-weight: 700;}
+
+.html {margin: 20px 0 20px 0;}
+.htmla{color: azure;background: orangered;}
+.htmlb{}
+.htmlc{font-weight: 700;}
+
+.body {margin: 20px 0 20px 0;}
+.bodya{color: azure;background: darkslategrey;}
+.bodyb{}
+.bodyc{font-weight: 700;}
+
+.class {margin: 20px 0 20px 0;}
+.classa{color: azure;background: #00FF7F;}
+.classb{}
+.classc{font-weight: 700;}
+
+.id {margin: 20px 0 20px 0;}
+.ida{color: azure;background: #551A8B;}
+.idb{}
+.idc{font-weight: 700;}
+
+.b{margin: 20px 0 20px 0;}
+.ba{color: azure;background: #FF8247;}
+.bb{}
+.bc{font-weight: 700;}
+
+.em{margin: 20px 0 20px 0;}
+.ema{color: azure;background: #FFA500;}
+.emb{}
+.emc{font-weight: 700;}
+
+.u{margin: 20px 0 20px 0;}
+.ua{color: azure;background: 	#FF1493;}
+.ub{}
+.uc{font-weight: 700;}
+
+.linksrc{margin: 20px 0 20px 0;}
+.linksrca{color: azure;background: #1E90FF;}
+.linksrcb{}
+.linksrcc{font-weight: 700;}
+
+.linktag{margin: 20px 0 20px 0;}
+.linktaga{color: azure;background: #778899;}
+.linktagb{}
+.linktagc{font-weight: 700;}
+
+.stylesrc{margin: 20px 0 20px 0;}
+.stylesrca{color: azure;background: #A52A2A;}
+.stylesrcb{}
+.stylesrcc{font-weight: 700;}
+
+.styletag{margin: 20px 0 20px 0;}
+.styletaga{color: azure;background: #00CED1;}
+.styletagb{}
+.styletagc{font-weight: 700;}
+
+.scriptsrc{margin: 20px 0 20px 0;}
+.scriptsrca{color: azure;background: 	#9400D3;}
+.scriptsrcb{}
+.scriptsrcc{font-weight: 700;}
+
+.scripttag{padding: 10px 0 10px 0;}
+.scripttaga{color: azure;background: yellow;}
+.scripttagb{}
+.scripttagc{font-weight: 700;}
+
+/*------------------------------------------------------------------------RESULT PAGE INNER CSS----------------------------------------------------------------------------------------------*/
+
+@media(max-width:390px){
+  .table{
+    padding: 0;
+    margin: 0;
+  }
+  .abr{
+    display: block;
+  }
+}
+
+
+@media(max-width:425px){
+  .rowhead{
+   color: lightskyblue !important; 
+  }
+}
+
+#myBtn {
+  display: none;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 900;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #7f00ff, #e100ff);
+  color: white;
+}
+.fa-chevron-up{
+    font-size: 18px;
+    padding: 12px;
+  }
+@media(max-width:425px){
+  #mybtn {
+    padding: 0 !important;
+  }  
+  .fa-chevron-up{
+    font-size: 12px;
+  }
+}
+#scrappy{
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.397);
+}
+#scrappy:focus{
+  background: #ff156f;
+}
+</style>
+{% endblock outstyle %}
+
+{% block activelink2 %}
+active
+{% endblock activelink2 %}
+
+
+{% block body %} 
+ <form id="bgone" action="" method="post">
+  {% csrf_token %}
+    <div id="mains" class="main">
+            <div class="make">
+<button class="backtoup" onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fas fa-chevron-up"></i> </button>
+
+        <h1>Enter Your <span class="block2">URL Here</span></h1> 
+            <div class="forum">
+                <input name="url" type="url" placeholder="https://something.com" required>
+                <button id="scrappy" type="submit" > SCRAP </button>  
+            </div>
+            <h2>Select which element you want to scrap <span id="block1"> (choose only one) </span> </h2>
+    <div class="table">
+
+      <div class="col col1">
+        <div class="row">
+          <h6 class="rowhead" style="position: relative;top: -20px;text-align: center;font-weight: 500;color: #ff156f;font-size: 16px;padding-top: 8px;">TEXTS</h6>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h1" type="checkbox" id="flexSwitchCheckChecked">
+                <label class="form-check-label" for="flexSwitchCheckChecked">h1 <span class="abr"> (text) </span> </label>
+            </div>
+        
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h2" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h2 <span class="abr"> (text) </span> </label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h3" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h3 <span class="abr"> (text) </span> </label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h4" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h4 <span class="abr"> (text) </span></label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h5" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h5 <span class="abr"> (text) </span></label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h6" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h6 <span class="abr"> (text) </span> </label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="p" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">p <span class="abr"> (text) </span> </label>
+            </div>
+        </div>
+                
+        <div class="row">
+          <h6 class="rowhead" style="position: relative;top: -20px;text-align: center;font-weight: 500;color: #ff156f;font-size: 16px;padding-top: 8px;">URL & TAGS</h6>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="an" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" style="text-transform: none;" for="flexSwitchCheckChecked">a <span class="abr"> (name) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="al" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" style="text-transform: none;" for="flexSwitchCheckChecked">a <span class="abr"> (url) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="img" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" for="flexSwitchCheckChecked">Image <span class="abr"> (url) </span> </label>
+          </div>
+          
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+            <input class="form-check-input" name="divtext" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked">div <span class="abr"> (text) </span> </label>
+        </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="divtag" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" for="flexSwitchCheckChecked"> Div <span class="abr"> (tag) </span>  </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+            <input class="form-check-input" name="alltags" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked"> All Tags</label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="title" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" for="flexSwitchCheckChecked">Title <span class="abr"> (name) </span> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col col2">               
+        <div class="row">
+          <h6 class="rowhead" style="position: relative;top: -20px;text-align: center;font-weight: 500;color: #ff156f;font-size: 16px;padding-top: 8px;">TAGS & LETTERS</h6>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="html" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" style="text-transform: none;" for="flexSwitchCheckChecked">HTML <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="body" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" style="text-transform: none;" for="flexSwitchCheckChecked">BODY <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+            <input class="form-check-input" name="class" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked">CLASS <span class="abr"> (ALL) </span></label>
+        </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+            <input class="form-check-input" name="id" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked"> ID <span class="abr"> (ALL) </span> </label>
+        </div>
+        <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+          <input class="form-check-input" name="strong" type="checkbox" id="flexSwitchCheckChecked" >
+          <label class="form-check-label" for="flexSwitchCheckChecked"> STRONG <span class="abr"> (bold) </span> </label>
+        </div>
+        <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+          <input class="form-check-input" name="em" type="checkbox" id="flexSwitchCheckChecked" >
+          <label class="form-check-label" for="flexSwitchCheckChecked"> EM  <span class="abr"> (italics) </span> </label>
+      </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="u" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" for="flexSwitchCheckChecked"> U <span class="abr"> (underline) </span> </label>
+          </div>
+        </div>
+        <div class="row">
+          <h6 class="rowhead" style="position: relative;top: -20px;text-align: center;font-weight: 500;color: #ff156f;font-size: 16px;padding-top: 8px;">Coming Soon</h6>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="linksrc" type="checkbox" id="flexSwitchCheckChecked" onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">LINK <span class="abr"> (SRC) </span> </label>
+          </div>
+      
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="linktag" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">LINK <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="stylesrc" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">  STYLE <span class="abr"> (SRC) </span>  </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="styletag" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">  STYLE <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="scriptsrc" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked"> SCRIPT <span class="abr"> (SRC) </span></label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="scripttag" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">  SCRIPT <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="imgadv" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">IMAGE <span class="abr adv"> (ADV.) </span> </label>
+          </div>
+      </div>
+      </div>
+          </div>
+    </div>
+</form>    
+{% if response %}
+  
+    <div class="result">
+        <h1>Scrapped Material</h1>
+        <h2>   based on the options you selected here are the results </h2>
+        <div class="alignright"> {% if image %}  <a href="#imagesgall"> <button type="button"> Images </button> </a> {% endif %}</div>
+        <div style="text-align: center;" class="results"> 
+          <div class="h1" style="padding: 10px;">
+          {% if h1 %}
+          <br>
+           <span class="h1a" style="font-weight: 700;font-size: 25px;"> H1 </span>
+          <br>
+          <br>
+          <span class="h1b" style="font-weight: 700;"> 
+            {% for i in h1 %} {{i}} <br> {% endfor %} 
+          </span>
+          <br>
+          {% else %}  
+          <br>
+          <span class="h1a" style="font-weight: 700;font-size: 25px;"> H1 </span>
+            <span class="h1c" style="font-weight: 700;text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+              H1 IS ABSENT
+            </span>
+          {% endif %}
+        </div>
+        <div class="h2" style="padding: 10px;" class="h2">
+        <!---->
+          {% if h2 %}  
+          <span class="h2a" style="font-weight: 700;font-size: 25px;">H2</span> 
+         <br>
+         <br>
+         <span class="h2b" style="font-weight: 700;"> 
+           {% for i in h2 %} {{i}} <br> {% endfor %} 
+         </span>
+         <br>
+         {% else %}  
+         <span class="h2a" style="font-weight: 700;font-size: 25px;">H2</span> 
+           <span class="h2c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+             H2 IS ABSENT
+           </span>
+         {% endif %}          
+        <!---->
+        </div>
+
+        <div style="padding: 10px;" class="h3">
+        <!---->
+          {% if h3 %}  
+          <span class="h3a" style="font-weight: 700;font-size: 25px;">H3</span>
+         <br>
+         <br>
+         <span class="h3b" style="font-weight: 700;"> 
+           {% for i in h3 %} {{i}} <br> {% endfor %} 
+         </span>
+         <br>
+         {% else %}  
+         <span class="h3a" style="font-weight: 700;font-size: 25px;">H3</span>
+           <span class="h3c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+             H3 IS ABSENT
+           </span>
+         {% endif %}    
+        </div>
+        
+        <div style="padding: 10px;" class="h4">
+        <!---->
+         {% if h4 %}  
+         <span class="h4a" style="font-weight: 700;font-size: 25px;">H4</span>
+        <br>
+        <br>
+        <span class="h4b" style="font-weight: 700;"> 
+          {% for i in h4 %} {{i}} <br> {% endfor %} 
+        </span>
+        <br>
+        {% else %}  
+        <span class="h4a" style="font-weight: 700;font-size: 25px;">H4</span>
+          <span class="h4c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+            H4 IS ABSENT
+          </span>
+        {% endif %}  
+        <!---->
+      </div>
+      <div style="padding: 10px;" class="h5">
+        {% if h5 %}  
+        <span class="h5a" style="font-weight: 700;font-size: 25px;">H5 </span>
+       <br>
+       <br>
+       <span class="h5b" style="font-weight: 700;"> 
+         {% for i in h5 %} {{i}} <br> {% endfor %} 
+       </span>
+       <br>
+       {% else %}  
+       <span class="h5a" style="font-weight: 700;font-size: 25px;">H5 </span>
+         <span class="h5c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+           H5 IS ABSENT
+         </span>
+       {% endif %}    
+      </div>
+      
+      <div style="padding: 10px;" class="h6">
+       {% if h6 %}  
+       <span class="h6a" style="font-weight: 700;font-size: 25px;">H6 </span>
+      <br>
+      <br>
+      <span class="h6b" style="font-weight: 700;"> 
+        {% for i in h6 %} {{i}} <br> {% endfor %} 
+      </span>
+      <br>
+      {% else %}  
+      <span class="h6a" style="font-weight: 700;font-size: 25px;">H6 </span>
+            <span class="h6c" style="text-align: center; display: block;font-weight: 700; font-size: 20px;margin: 25px 0 25px 0;">
+              H6 IS ABSENT
+            </span>
+          {% endif %}          
+        </div>
+        <div style="padding: 10px;" class="p">
+        {% if p %}  
+        <span class="pa" style="font-weight: 700;font-size: 25px;">P</span>
+        <br>
+        <br>
+        <span class="pb" style="font-weight: 500;font-size: 15px;"> 
+          {% for i in p %} {{i}} <br> {% endfor %} 
+        </span>
+        <br>
+        {% else %}  
+        <span class="pa" style="font-weight: 700;font-size: 25px;">P</span>
+          <span class="pc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+            P IS ABSENT
+          </span>
+        {% endif %}    
+      </div>
+      <div style="padding: 10px;"  class="an">      
+        {% if an %}  
+        <span class="ana" style="font-weight: 700;font-size: 25px;">ANCHOR NAMES </span>
+      <br>
+      <br>
+      <span class="anb"> 
+        {% for i in an %} {{i}}  <br> {% endfor %}
+      </span>
+      <br>
+      {% else %}  
+      <span class="ana" style="font-weight: 700;font-size: 25px;">ANCHOR NAMES </span>
+        <span class="anc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+          Anchor Name IS ABSENT
+        </span>
+      {% endif %}     
+    </div>
+    <div style="padding: 10px;" class="al">     
+      {% if al %}  
+      <span class="ala" style="font-weight: 700;font-size: 25px;">ANCHOR LINKS </span>
+      <br>
+      <br>
+      <span  style="font-weight: 700;"> 
+        {% for i in al %} <a class="alb" href="{{i}}" target="_blank">  {{i}}  </a> <br> {% endfor %} 
+      </span>
+      <br>
+      {% else %}  
+      <span class="ala" style="font-weight: 700;font-size: 25px;">ANCHOR LINKS </span>
+        <span class="alc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+          Anchor Link Is Absent
+        </span>
+      {% endif %}   
+    </div>
+    <div style="padding: 10px;" class="image">       
+      {% if image %}  
+      <span class="imagea" style="font-weight: 700;font-size: 25px;">IMAGE LINK</span>
+      <br>
+      <br>
+      <span style="font-weight: 700;" > 
+        {% for i in image %} <a class="imageb" href="{{i}}" target="_blank"> {{i}} </a> <br> {% endfor %} 
+      </span>
+      <br>
+      {% else %}  
+      <span class="imagea" style="font-weight: 700;font-size: 25px;">IMAGE LINK</span>
+        <span class="imagec" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;text-transform: uppercase;">
+          Image Link Is Absent
+        </span>
+      {% endif %}
+    </div>
+    <div style="padding: 10px;" class="div">
+      {% if div %}  
+      <span class="diva" style="font-weight: 700;font-size: 25px;">DIVISION TEXT </span>
+    <br>
+    <br>
+    <span class="divb" style="font-weight: 400;"> 
+      {% for i in div %}  {{i}} <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="diva" style="font-weight: 700;font-size: 25px;">DIVISION TEXT</span><br><br>
+      <span class="divc" style="text-align: center;font-size: 20px;">
+        division TEXT Is Absent
+      </span>
+    {% endif %}
+    </div>
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="divtag">
+      {% if divtag %}  
+      <span class="divtaga" style="font-weight: 700;font-size: 25px;">DIVISION TAG </span>
+    <br>
+    <br>
+    <span class="divtagb" style="font-size: 14px;font-weight: 400;"> 
+      {% for i in divtag %}  {{i}} <br> <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="divtaga" style="font-weight: 700;font-size: 25px;">DIVISION TAG</span><br><br>
+      <span class="divtagc" style="text-align: center;font-size: 20px;">
+          Division TAG Is Absent
+      </span>
+    {% endif %}
+    </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="alltag">
+      {% if alltagnames %}  
+      <span class="alltaga" style="font-weight: 700;font-size: 25px;"> ALL TAG NAMES </span>
+    <br>
+    <br>
+    <span class="alltagb" style="font-weight: 400;"> 
+      {% for i in alltagnames %}  {{i}} <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="alltaga" style="font-weight: 700;font-size: 25px;">ALL TAG NAMES</span><br><br>
+      <span class="alltagc" style="text-align: center;font-size: 20px;">
+          All TAGs Names are Absent
+      </span>
+    {% endif %}
+    </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+
+
+
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            <div style="padding: 10px;" class="source">
+              {% if title %}  
+              <span class="sourcea" style="font-weight: 700;font-size: 25px;"> TITLE NAME </span>
+            <br>
+            <br>
+            <span class="sourceb" style="font-weight: 700;color: black;font-size: 22px;"> 
+              {% for i in title %}  {{i}} <br> {% endfor %} 
+            </span>
+            <br>
+            {% else %}  
+            <span class="sourcea" style="font-weight: 700;font-size: 25px;">TITLE NAME</span><br><br>
+              <span class="sourcec" style="text-align: center;font-size: 20px;">
+                TITLE NAME IS Absent
+              </span>
+            {% endif %}
+            </div> 
+              <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="html">
+      {% if html %}  
+      <span class="htmla" style="font-weight: 700;font-size: 25px;">HTML TAG </span>
+    <br>
+    <br>
+    <span class="htmlb" style="font-weight: 400;"> 
+      {% for i in html %}  {{i}} <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="htmla" style="font-weight: 700;font-size: 25px;">HTML TAG</span><br><br>
+      <span class="htmlc" style="text-align: center;font-size: 20px;">
+          HTML TAG Is Absent
+      </span>
+    {% endif %}
+    </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="body">
+      {% if body %}  
+      <span class="bodya" style="font-weight: 700;font-size: 25px;">BODY TAG </span>
+    <br>
+    <br>
+    <span class="bodyb" style="font-weight: 400;"> 
+      {% for i in body %}  {{i}} <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="bodya" style="font-weight: 700;font-size: 25px;">BODY TAG</span><br><br>
+      <span class="bodyc" style="text-align: center;font-size: 20px;">
+          body tag Is Absent
+      </span>
+    {% endif %}
+    </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="class">
+      {% if classname %}  
+      <span class="classa" style="font-weight: 700;font-size: 25px;">Class names </span>
+    <br>
+    <br>
+    <span class="classb" style="font-weight: 400;"> 
+      {% for i in classname %}  {{i}} <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="classa" style="font-weight: 700;font-size: 25px;">Class names</span><br><br>
+      <span class="classc" style="text-align: center;font-size: 20px;">
+          Class names are Absent
+      </span>
+    {% endif %}
+    </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="id">
+      {% if idname %}  
+      <span class="ida" style="font-weight: 700;font-size: 25px;">id names </span>
+    <br>
+    <br>
+    <span class="idb" style="font-weight: 400;"> 
+      {% for i in idname %}  {{i}} <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="ida" style="font-weight: 700;font-size: 25px;">id names</span><br><br>
+      <span class="idc" style="text-align: center;font-size: 20px;">
+          id names are Absent
+      </span>
+    {% endif %}
+    </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE r67ktrl7BATCH ONE BATCH ONE BAr576l8l;6TCH ONE BATCH ONE BATCH ONE BATCH ONE Br565tl6tyl;tATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE eu6rBATCH ONE BATCH ONEr65t7lt BATCH ONE BATCH ONE BATCH O57686y78lNE BATCH ONE BATCH ONE 5t6l8l6lo6yBATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="b">
+      {% if strong %}  
+      <span class="ba" style="font-weight: 700;font-size: 25px;">STRONG TEXT </span>
+    <br>
+    <br>
+    <span class="bb" style="font-weight: 900;"> 
+      {% for i in strong %}  {{i}} <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="ba" style="font-weight: 700;font-size: 25px;">STRONG TEXT</span><br><br>
+      <span class="bc" style="text-align: center;font-size: 20px;">
+        STRONG TEXT IS Absent
+      </span>
+    {% endif %}
+    </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="em">
+      {% if em %}  
+      <span class="ema" style="font-weight: 700;font-size: 25px;">Em text </span>
+    <br>
+    <br>
+    <span class="emb" style="font-weight: 400;font-style: italic;"> 
+      {% for i in em %}  {{i}} <br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="ema" style="font-weight: 700;font-size: 25px;">em text</span><br><br>
+      <span class="emc" style="text-align: center;font-size: 20px;">
+          em text Is Absent
+      </span>
+    {% endif %}
+    </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="u">
+      {% if u %}  
+      <span class="ua" style="font-weight: 700;font-size: 25px;">U TEXT </span>
+    <br>
+    <br>
+    <span class="ub" style="font-weight: 400;"> 
+      {% for i in u %} <u> {{i}} </u><br> {% endfor %} 
+    </span>
+    <br>
+    {% else %}  
+    <span class="ua" style="font-weight: 700;font-size: 25px;">U TEXT</span><br><br>
+      <span class="uc" style="text-align: center;font-size: 20px;">
+          U TEXT Is Absent
+      </span>
+    {% endif %}
+    </div> 
+  </div>
+    </div>
+
+
+    <style>
+      .imagesdisplayed{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 50px;
+        width: 100% !important;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        box-shadow: 0 0 8px 5px #b421fe4b;
+        margin-top: 60px;
+      }
+      .imagesdisplayed a{
+        margin: 5px;
+      }
+      .imagesdisplayed img{
+        width: 100% !important;
+        height: 100%;
+        box-shadow: 0 0 10px 5px rgb(0, 0,0,0.1);
+        transition: 0.5s;
+      }
+      .imagesdisplayed img:hover{
+        transition: 0.5s;
+        box-shadow: 0 0 10px 5px rgb(0, 0,0,0.2);
+      }
+      
+      .heading-picture{
+        font-size: 26px;
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        padding-top:    25px;
+        padding-bottom: 25px;
+        width: 100%;
+      }
+      @media(max-width:425px){
+        .imagesdisplayed{
+        width: 90% !important;
+        box-shadow: none;
+        position: relative;
+        top: -60px;
+      }
+      .imagesdisplayed a{
+        margin: 5px;
+      }
+      .imagesdisplayed img{
+        box-shadow: none;
+        box-shadow: 0 0 1px 1.5px rgb(170, 0, 255);
+      }
+      .heading-picture{
+        color: white !important;
+        }
+      }
+    </style>
+    
+    {% if image %}
+    <div class="imagesdisplayed">
+
+      <h1 id="imagesgall" class="heading-picture"> IMAGES FROM SCRAPING</h1> <br>
+    {% for i in image %}
+    
+    <a href="{{i}}" target="_blank"> <img src="{{i}}" alt="" width="100%">  </a>
+    
+    {% endfor %}
+    {% endif %}
+    </div>
+
+{% endif %}
+
+</div>
+
+{% endblock body %}
+
+
+{% block script %} 
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+{% endblock script %}
