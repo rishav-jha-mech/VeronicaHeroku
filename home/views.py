@@ -219,8 +219,6 @@ def veronica(request):
             for i in soup.find_all( 'u' ):
                 u.append(i.get_text())
 
-      
-
     return render(request,"veronica.html",{'image': image,'h1':h1,'h2':h2,'h3':h3,'h4':h4,'h5':h5,'h6':h6,'p':p,'an':an,'al':al,'image':image,'div':div,'divtag':divtag,'sourceurl':sourceurl,'alltagnames':alltagnames,'html':html,'body':body,'classname':classname,'idname':idname,'strong':strong,'em':em,'u':u,'linktag':linktag,'styletag':styletag,'scripttag':scripttag,'linksrc':linksrc,'stylesrc':stylesrc,'scriptsrc':scriptsrc,'title':title,'response':response,'mess':mess,})
 
 def mediascrap(request):
