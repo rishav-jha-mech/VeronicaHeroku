@@ -43,7 +43,7 @@
   .main {
     min-height: 100vh;
     background-position: center;
-    background: url(../images/bg-mobi-ver.gif);
+    background: url('../images/bg-mobi-ver.gif');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -624,6 +624,946 @@ a {
     margin: 2%;
   }
 }
+/*------------------------------------------------------------------------RESULT PAGE INNER CSS----------------------------------------------------------------------------------------------*/
+
+@media (max-width: 425px) {
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  .p,
+  .div,
+  .image,
+  .al,
+  .an,
+  .divtag,
+  .alltag,
+  .source,
+  .html,
+  .body,
+  .class,
+  .id,
+  .b,
+  .em,
+  .u,
+  .linksrc,
+  .linktag,
+  .stylesrc,
+  .styletag,
+  .scriptsrc,
+  .scripttag {
+    background: transparent !important;
+    padding: 6px !important;
+  }
+  .h1c,
+  .h2c,
+  .h3c,
+  .h4c,
+  .h5c,
+  .h6c,
+  .pc,
+  .divc,
+  .imagec,
+  .alc,
+  .anc,
+  .divtagc,
+  .alltagc,
+  .sourcec,
+  .htmlc,
+  .bodyc,
+  .classc,
+  .idc,
+  .bc,
+  .emc,
+  .uc,
+  .linksrcc,
+  .linktagc,
+  .stylesrcc,
+  .styletagc,
+  .scriptsrcc,
+  .scripttagc {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .h1a,
+  .h2a,
+  .h3a,
+  .h4a,
+  .h5a,
+  .h6a,
+  .pa,
+  .diva,
+  .imagea,
+  .ala,
+  .ana,
+  .divtaga,
+  .alltaga,
+  .sourcea,
+  .htmla,
+  .bodya,
+  .classa,
+  .ida,
+  .ba,
+  .ema,
+  .ua,
+  .linksrca,
+  .linktaga,
+  .stylesrca,
+  .styletaga,
+  .scriptsrca,
+  .scripttaga {
+    background: transparent !important;
+  }
+  .h1 {
+    margin: 20px 0 20px 0;
+  }
+  .h1a {
+    color: #fff1e1;
+    background-color: #ed3572;
+  }
+  .h1b {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .h1c {
+    font-weight: 700;
+  }
+
+  .h2 {
+    margin: 20px 0 20px 0;
+  }
+  .h2a {
+    color: #ffffff;
+    background-color: #077b8a;
+  }
+  .h2b {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .h2c {
+    font-weight: 700;
+  }
+
+  .h3 {
+    margin: 20px 0 20px 0;
+  }
+  .h3a {
+    color: #ffffff;
+    background-color: #be1558;
+  }
+  .h3b {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .h3c {
+    font-weight: 700;
+  }
+
+  .h4 {
+    margin: 20px 0 20px 0;
+  }
+  .h4a {
+    color: #ffffff;
+    background-color: #316879;
+  }
+  .h4b {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .h4c {
+    font-weight: 700;
+  }
+
+  .h5 {
+    margin: 20px 0 20px 0;
+  }
+  .h5a {
+    color: #ffffff;
+    background-color: #be1558;
+  }
+  .h5b {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .h5c {
+    font-weight: 700;
+  }
+
+  .h6 {
+    margin: 20px 0 20px 0;
+  }
+  .h6a {
+    color: #ffffff;
+    background-color: #d902ee;
+  }
+  .h6b {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .h6c {
+    font-weight: 700;
+  }
+
+  .p {
+    margin: 20px 0 20px 0;
+  }
+  .pa {
+    color: #ffffff;
+    background-color: #1868ae;
+  }
+  .pb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .pc {
+    font-weight: 700;
+  }
+
+  .an {
+    margin: 20px 0 20px 0;
+  }
+  .ana {
+    color: #ffffff;
+    background-color: #4d5198;
+  }
+  .anb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .anc {
+    font-weight: 700;
+  }
+
+  .al {
+    margin: 20px 0 20px 0;
+  }
+  .ala {
+    color: #ffffff;
+    background-color: #315f72;
+  }
+  .alb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .alc {
+    font-weight: 700;
+  }
+
+  .image {
+    margin: 20px 0 20px 0;
+  }
+  .imagea {
+    color: #ffffff;
+    background-color: #500742;
+  }
+  .imageb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .imagec {
+    font-weight: 700;
+  }
+
+  .div {
+    margin: 20px 0 20px 0;
+  }
+  .diva {
+    color: #ffffff;
+    background-color: teal;
+  }
+  .divb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .divc {
+    font-weight: 700;
+    display: block;
+  }
+
+  .divtag {
+    margin: 20px 0 20px 0;
+  }
+  .divtaga {
+    color: #ffffff;
+    background-color: crimson;
+  }
+  .divtagb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .divtagc {
+    font-weight: 700;
+    display: block;
+  }
+
+  .alltag {
+    margin: 20px 0 20px 0;
+  }
+  .alltaga {
+    color: azure;
+    background: green;
+  }
+  .alltagb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .alltagc {
+    font-weight: 700;
+  }
+
+  .source {
+    margin: 20px 0 20px 0;
+  }
+  .sourcea {
+    color: azure;
+    background: darkmagenta;
+  }
+  .sourceb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .sourcec {
+    font-weight: 700;
+  }
+
+  .html {
+    margin: 20px 0 20px 0;
+  }
+  .htmla {
+    color: azure;
+    background: orangered;
+  }
+  .htmlb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .htmlc {
+    font-weight: 700;
+  }
+
+  .body {
+    margin: 20px 0 20px 0;
+  }
+  .bodya {
+    color: azure;
+    background: darkslategrey;
+  }
+  .bodyb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .bodyc {
+    font-weight: 700;
+  }
+
+  .class {
+    margin: 20px 0 20px 0;
+  }
+  .classa {
+    color: azure;
+    background: #00ff7f;
+  }
+  .classb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .classc {
+    font-weight: 700;
+  }
+
+  .id {
+    margin: 20px 0 20px 0;
+  }
+  .ida {
+    color: azure;
+    background: #551a8b;
+  }
+  .idb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .idc {
+    font-weight: 700;
+  }
+
+  .b {
+    margin: 20px 0 20px 0;
+  }
+  .ba {
+    color: azure;
+    background: #ff8247;
+  }
+  .bb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .bc {
+    font-weight: 700;
+  }
+
+  .em {
+    margin: 20px 0 20px 0;
+  }
+  .ema {
+    color: azure;
+    background: #ffa500;
+  }
+  .emb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .emc {
+    font-weight: 700;
+  }
+
+  .u {
+    margin: 20px 0 20px 0;
+  }
+  .ua {
+    color: azure;
+    background: #ff1493;
+  }
+  .ub {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .uc {
+    font-weight: 700;
+  }
+
+  .linksrc {
+    margin: 20px 0 20px 0;
+  }
+  .linksrca {
+    color: azure;
+    background: #1e90ff;
+  }
+  .linksrcb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .linksrcc {
+    font-weight: 700;
+  }
+
+  .linktag {
+    margin: 20px 0 20px 0;
+  }
+  .linktaga {
+    color: azure;
+    background: #778899;
+  }
+  .linktagb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .linktagc {
+    font-weight: 700;
+  }
+
+  .stylesrc {
+    margin: 20px 0 20px 0;
+  }
+  .stylesrca {
+    color: azure;
+    background: #a52a2a;
+  }
+  .stylesrcb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .stylesrcc {
+    font-weight: 700;
+  }
+
+  .styletag {
+    margin: 20px 0 20px 0;
+  }
+  .styletaga {
+    color: azure;
+    background: #00ced1;
+  }
+  .styletagb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .styletagc {
+    font-weight: 700;
+  }
+
+  .scriptsrc {
+    margin: 20px 0 20px 0;
+  }
+  .scriptsrca {
+    color: azure;
+    background: #9400d3;
+  }
+  .scriptsrcb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .scriptsrcc {
+    font-weight: 700;
+  }
+
+  .scripttag {
+    padding: 10px 0 10px 0;
+  }
+  .scripttaga {
+    color: azure;
+    background: yellow;
+  }
+  .scripttagb {
+    color: aqua !important;
+    font-weight: 400 !important;
+  }
+  .scripttagc {
+    font-weight: 700;
+  }
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.p,
+.div,
+.image,
+.al,
+.an {
+  padding: 15px !important;
+}
+.h1a,
+.h2a,
+.h3a,
+.h4a,
+.h5a,
+.h6a,
+.pa,
+.diva,
+.imagea,
+.ala,
+.ana,
+.divtaga,
+.alltaga,
+.sourcea,
+.htmla,
+.bodya,
+.classa,
+.ida,
+.ba,
+.ema,
+.ua,
+.linksrca,
+.linktaga,
+.stylesrca,
+.styletaga,
+.scriptsrca,
+.scripttaga {
+  padding: 10px 22px 10px 22px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.h1c,
+.h2c,
+.h3c,
+.h4c,
+.h5c,
+.h6c,
+.pc,
+.divc,
+.imagec,
+.alc,
+.anc,
+.divtagc,
+.alltagc,
+.sourcec,
+.htmlc,
+.bodyc,
+.classc,
+.idc,
+.bc,
+.emc,
+.uc,
+.linksrcc,
+.linktagc,
+.stylesrcc,
+.styletagc,
+.scriptsrcc,
+.scripttagc {
+  text-transform: uppercase;
+}
+
+.h1 {
+  margin: 20px 0 20px 0;
+}
+.h1a {
+  color: #fff1e1;
+  background-color: #ed3572;
+}
+.h1b {
+  color: #ed3572;
+}
+.h1c {
+  font-weight: 700;
+}
+
+.h2 {
+  margin: 20px 0 20px 0;
+}
+.h2a {
+  color: #ffffff;
+  background-color: #077b8a;
+}
+.h2b {
+  color: #077b8a;
+}
+.h2c {
+  font-weight: 700;
+}
+
+.h3 {
+  margin: 20px 0 20px 0;
+}
+.h3a {
+  color: #ffffff;
+  background-color: #be1558;
+}
+.h3b {
+  color: #be1558;
+}
+.h3c {
+  font-weight: 700;
+}
+
+.h4 {
+  margin: 20px 0 20px 0;
+}
+.h4a {
+  color: #ffffff;
+  background-color: #316879;
+}
+.h4b {
+  color: #316879;
+}
+.h4c {
+  font-weight: 700;
+}
+
+.h5 {
+  margin: 20px 0 20px 0;
+}
+.h5a {
+  color: #ffffff;
+  background-color: #be1558;
+}
+.h5b {
+  color: #be1558;
+}
+.h5c {
+  font-weight: 700;
+}
+
+.h6 {
+  margin: 20px 0 20px 0;
+}
+.h6a {
+  color: #ffffff;
+  background-color: #d902ee;
+}
+.h6b {
+  color: #d902ee;
+}
+.h6c {
+  font-weight: 700;
+}
+
+.p {
+  margin: 20px 0 20px 0;
+}
+.pa {
+  color: #ffffff;
+  background-color: #1868ae;
+}
+.pb {
+  color: #1868ae;
+}
+.pc {
+  font-weight: 700;
+}
+
+.an {
+  margin: 20px 0 20px 0;
+}
+.ana {
+  color: #ffffff;
+  background-color: #4d5198;
+}
+.anb {
+  color: #4d5198;
+}
+.anc {
+  font-weight: 700;
+}
+
+.al {
+  margin: 20px 0 20px 0;
+}
+.ala {
+  color: #ffffff;
+  background-color: #315f72;
+}
+.alb {
+  color: #315f72;
+}
+.alc {
+  font-weight: 700;
+}
+
+.image {
+  margin: 20px 0 20px 0;
+}
+.imagea {
+  color: #ffffff;
+  background-color: #500742;
+}
+.imageb {
+  color: #500742;
+}
+.imagec {
+  font-weight: 700;
+}
+
+.div {
+  margin: 20px 0 20px 0;
+}
+.diva {
+  color: #ffffff;
+  background-color: teal;
+}
+.divb {
+  color: teal;
+}
+.divc {
+  font-weight: 700;
+  display: block;
+}
+
+.divtag {
+  margin: 20px 0 20px 0;
+}
+.divtaga {
+  color: #ffffff;
+  background-color: crimson;
+}
+.divtagb {
+  color: black;
+}
+.divtagc {
+  font-weight: 700;
+  display: block;
+}
+
+.alltag {
+  margin: 20px 0 20px 0;
+}
+.alltaga {
+  color: azure;
+  background: green;
+}
+.alltagb {
+}
+.alltagc {
+  font-weight: 700;
+}
+
+.source {
+  margin: 20px 0 20px 0;
+}
+.sourcea {
+  color: azure;
+  background: darkmagenta;
+}
+.sourceb {
+}
+.sourcec {
+  font-weight: 700;
+}
+
+.html {
+  margin: 20px 0 20px 0;
+}
+.htmla {
+  color: azure;
+  background: orangered;
+}
+.htmlb {
+}
+.htmlc {
+  font-weight: 700;
+}
+
+.body {
+  margin: 20px 0 20px 0;
+}
+.bodya {
+  color: azure;
+  background: darkslategrey;
+}
+.bodyb {
+}
+.bodyc {
+  font-weight: 700;
+}
+
+.class {
+  margin: 20px 0 20px 0;
+}
+.classa {
+  color: azure;
+  background: #00ff7f;
+}
+.classb {
+}
+.classc {
+  font-weight: 700;
+}
+
+.id {
+  margin: 20px 0 20px 0;
+}
+.ida {
+  color: azure;
+  background: #551a8b;
+}
+.idb {
+}
+.idc {
+  font-weight: 700;
+}
+
+.b {
+  margin: 20px 0 20px 0;
+}
+.ba {
+  color: azure;
+  background: #ff8247;
+}
+.bb {
+}
+.bc {
+  font-weight: 700;
+}
+
+.em {
+  margin: 20px 0 20px 0;
+}
+.ema {
+  color: azure;
+  background: #ffa500;
+}
+.emb {
+}
+.emc {
+  font-weight: 700;
+}
+
+.u {
+  margin: 20px 0 20px 0;
+}
+.ua {
+  color: azure;
+  background: #ff1493;
+}
+.ub {
+}
+.uc {
+  font-weight: 700;
+}
+
+.linksrc {
+  margin: 20px 0 20px 0;
+}
+.linksrca {
+  color: azure;
+  background: #1e90ff;
+}
+.linksrcb {
+}
+.linksrcc {
+  font-weight: 700;
+}
+
+.linktag {
+  margin: 20px 0 20px 0;
+}
+.linktaga {
+  color: azure;
+  background: #778899;
+}
+.linktagb {
+}
+.linktagc {
+  font-weight: 700;
+}
+
+.stylesrc {
+  margin: 20px 0 20px 0;
+}
+.stylesrca {
+  color: azure;
+  background: #a52a2a;
+}
+.stylesrcb {
+}
+.stylesrcc {
+  font-weight: 700;
+}
+
+.styletag {
+  margin: 20px 0 20px 0;
+}
+.styletaga {
+  color: azure;
+  background: #00ced1;
+}
+.styletagb {
+}
+.styletagc {
+  font-weight: 700;
+}
+
+.scriptsrc {
+  margin: 20px 0 20px 0;
+}
+.scriptsrca {
+  color: azure;
+  background: #9400d3;
+}
+.scriptsrcb {
+}
+.scriptsrcc {
+  font-weight: 700;
+}
+
+.scripttag {
+  padding: 10px 0 10px 0;
+}
+.scripttaga {
+  color: azure;
+  background: yellow;
+}
+.scripttagb {
+}
+.scripttagc {
+  font-weight: 700;
+}
+
+/*------------------------------------------------------------------------RESULT PAGE INNER CSS----------------------------------------------------------------------------------------------*/
 
 @media (max-width: 390px) {
   .table {

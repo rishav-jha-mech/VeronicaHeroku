@@ -46,11 +46,13 @@ def veronica(request):
     if request.method == "POST":
         url = request.POST.get('url')
         response = "TRUE"
-        r = requests.get(url)
-        soup = BeautifulSoup(r.content, 'html.parser')
-        html_content = requests.get(url).text
-        soupxml = BeautifulSoup(html_content, "lxml")
-
+        try:
+            r = requests.get(url)
+            soup = BeautifulSoup(r.content, 'html.parser')
+            html_content = requests.get(url).text
+            soupxml = BeautifulSoup(html_content, "lxml")
+        except:
+            return redirect('veronica')
         #CHECK CONDITION#
         statehtml = request.POST.get('html'),
         statebody = request.POST.get('body'),
@@ -218,8 +220,40 @@ def veronica(request):
         if request.POST.get('u') == "on" :
             for i in soup.find_all( 'u' ):
                 u.append(i.get_text())
-
-    return render(request,"veronica.html",{'image': image,'h1':h1,'h2':h2,'h3':h3,'h4':h4,'h5':h5,'h6':h6,'p':p,'an':an,'al':al,'image':image,'div':div,'divtag':divtag,'sourceurl':sourceurl,'alltagnames':alltagnames,'html':html,'body':body,'classname':classname,'idname':idname,'strong':strong,'em':em,'u':u,'linktag':linktag,'styletag':styletag,'scripttag':scripttag,'linksrc':linksrc,'stylesrc':stylesrc,'scriptsrc':scriptsrc,'title':title,'response':response,'mess':mess,})
+    context={
+        'image': image,
+        'h1':h1,
+        'h2':h2,
+        'h3':h3,
+        'h4':h4,
+        'h5':h5,
+        'h6':h6,
+        'p':p,
+        'an':an,
+        'al':al,
+        'image':image,
+        'div':div,
+        'divtag':divtag,
+        'sourceurl':sourceurl,
+        'alltagnames':alltagnames,
+        'html':html,
+        'body':body,
+        'classname':classname,
+        'idname':idname,
+        'strong':strong,
+        'em':em,
+        'u':u,
+        'linktag':linktag,
+        'styletag':styletag,
+        'scripttag':scripttag,
+        'linksrc':linksrc,
+        'stylesrc':stylesrc,
+        'scriptsrc':scriptsrc,
+        'title':title,
+        'mess':mess,
+        'response':response,
+    }
+    return render(request,"veronica.html",context)
 
 def mediascrap(request):
     return render (request,'comingsoonmedia.html')

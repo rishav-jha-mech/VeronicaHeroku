@@ -10,7 +10,7 @@ active
 
 
 {% block body %} 
-<link rel="stylesheet" href="{% static 'css/Veronica.css' %}">
+<link rel="stylesheet" href="{% static './css/Veronica.css' %}">
 
  <form id="bgone" action="" method="post">
   {% csrf_token %}
@@ -20,7 +20,7 @@ active
 
         <h1>Enter Your <span class="block2">URL Here</span></h1> 
             <div class="forum">
-                <input name="url" type="url" placeholder="https://something.com" required>
+                <input name="url" type="url" placeholder="https://something.com" autocompletedisabled>
                 <button id="scrappy" type="submit" > SCRAP </button>  
             </div>
             <h2>Select which element you want to scrap <span id="block1"> (choose only one) </span> </h2>
@@ -161,53 +161,42 @@ active
           </div>
     </div>
 </form>    
-{% if response %}
   
     <div class="result">
         <h1>Scrapped Material</h1>
         <h2>   based on the options you selected here are the results </h2>
         <div class="alignright"> {% if image %}  <a href="#imagesgall"> <button type="button"> Images </button> </a> {% endif %}</div>
         <div style="text-align: center;" class="results"> 
-          <div class="h1" style="padding: 10px;">
+        <br/>
           {% if h1 %}
+          <div class="h1" style="padding: 10px;">
           <br>
-           <span class="h1a" style="font-weight: 700;font-size: 25px;"> H1 </span>
+           <span class="h1a" style="font-weight: 700;font-size: 25px;"> H1</span>
           <br>
           <br>
           <span class="h1b" style="font-weight: 700;"> 
             {% for i in h1 %} {{i}} <br> {% endfor %} 
           </span>
           <br>
-          {% else %}  
-          <br>
-          <span class="h1a" style="font-weight: 700;font-size: 25px;"> H1 </span>
-            <span class="h1c" style="font-weight: 700;text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
-              H1 IS ABSENT
-            </span>
+          </div>
           {% endif %}
-        </div>
-        <div class="h2" style="padding: 10px;" class="h2">
-        <!---->
+          <!---->
           {% if h2 %}  
+        <div class="h2" style="padding: 10px;" class="h2">
           <span class="h2a" style="font-weight: 700;font-size: 25px;">H2</span> 
          <br>
          <br>
          <span class="h2b" style="font-weight: 700;"> 
-           {% for i in h2 %} {{i}} <br> {% endfor %} 
-         </span>
-         <br>
-         {% else %}  
-         <span class="h2a" style="font-weight: 700;font-size: 25px;">H2</span> 
-           <span class="h2c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
-             H2 IS ABSENT
-           </span>
+          {% for i in h2 %} {{i}} <br> {% endfor %} 
+        </span>
+        <br>
+        </div>
          {% endif %}          
         <!---->
-        </div>
 
-        <div style="padding: 10px;" class="h3">
         <!---->
           {% if h3 %}  
+        <div style="padding: 10px;" class="h3">
           <span class="h3a" style="font-weight: 700;font-size: 25px;">H3</span>
          <br>
          <br>
@@ -215,17 +204,12 @@ active
            {% for i in h3 %} {{i}} <br> {% endfor %} 
          </span>
          <br>
-         {% else %}  
-         <span class="h3a" style="font-weight: 700;font-size: 25px;">H3</span>
-           <span class="h3c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
-             H3 IS ABSENT
-           </span>
-         {% endif %}    
-        </div>
+         </div>
+          {% endif %}    
         
-        <div style="padding: 10px;" class="h4">
         <!---->
          {% if h4 %}  
+        <div style="padding: 10px;" class="h4">
          <span class="h4a" style="font-weight: 700;font-size: 25px;">H4</span>
         <br>
         <br>
@@ -233,16 +217,11 @@ active
           {% for i in h4 %} {{i}} <br> {% endfor %} 
         </span>
         <br>
-        {% else %}  
-        <span class="h4a" style="font-weight: 700;font-size: 25px;">H4</span>
-          <span class="h4c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
-            H4 IS ABSENT
-          </span>
+        </div>
         {% endif %}  
         <!---->
-      </div>
-      <div style="padding: 10px;" class="h5">
         {% if h5 %}  
+      <div style="padding: 10px;" class="h5">
         <span class="h5a" style="font-weight: 700;font-size: 25px;">H5 </span>
        <br>
        <br>
@@ -250,16 +229,11 @@ active
          {% for i in h5 %} {{i}} <br> {% endfor %} 
        </span>
        <br>
-       {% else %}  
-       <span class="h5a" style="font-weight: 700;font-size: 25px;">H5 </span>
-         <span class="h5c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
-           H5 IS ABSENT
-         </span>
+       </div>
        {% endif %}    
-      </div>
       
-      <div style="padding: 10px;" class="h6">
        {% if h6 %}  
+      <div style="padding: 10px;" class="h6">
        <span class="h6a" style="font-weight: 700;font-size: 25px;">H6 </span>
       <br>
       <br>
@@ -267,15 +241,10 @@ active
         {% for i in h6 %} {{i}} <br> {% endfor %} 
       </span>
       <br>
-      {% else %}  
-      <span class="h6a" style="font-weight: 700;font-size: 25px;">H6 </span>
-            <span class="h6c" style="text-align: center; display: block;font-weight: 700; font-size: 20px;margin: 25px 0 25px 0;">
-              H6 IS ABSENT
-            </span>
-          {% endif %}          
-        </div>
-        <div style="padding: 10px;" class="p">
+      </div>
+        {% endif %}          
         {% if p %}  
+        <div style="padding: 10px;" class="p">
         <span class="pa" style="font-weight: 700;font-size: 25px;">P</span>
         <br>
         <br>
@@ -283,15 +252,10 @@ active
           {% for i in p %} {{i}} <br> {% endfor %} 
         </span>
         <br>
-        {% else %}  
-        <span class="pa" style="font-weight: 700;font-size: 25px;">P</span>
-          <span class="pc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
-            P IS ABSENT
-          </span>
+        </div>
         {% endif %}    
-      </div>
-      <div style="padding: 10px;"  class="an">      
         {% if an %}  
+      <div style="padding: 10px;"  class="an">      
         <span class="ana" style="font-weight: 700;font-size: 25px;">ANCHOR NAMES </span>
       <br>
       <br>
@@ -299,15 +263,10 @@ active
         {% for i in an %} {{i}}  <br> {% endfor %}
       </span>
       <br>
-      {% else %}  
-      <span class="ana" style="font-weight: 700;font-size: 25px;">ANCHOR NAMES </span>
-        <span class="anc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
-          Anchor Name IS ABSENT
-        </span>
+      </div>
       {% endif %}     
-    </div>
-    <div style="padding: 10px;" class="al">     
       {% if al %}  
+    <div style="padding: 10px;" class="al">     
       <span class="ala" style="font-weight: 700;font-size: 25px;">ANCHOR LINKS </span>
       <br>
       <br>
@@ -315,15 +274,10 @@ active
         {% for i in al %} <a class="alb" href="{{i}}" target="_blank">  {{i}}  </a> <br> {% endfor %} 
       </span>
       <br>
-      {% else %}  
-      <span class="ala" style="font-weight: 700;font-size: 25px;">ANCHOR LINKS </span>
-        <span class="alc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
-          Anchor Link Is Absent
-        </span>
+      </div>
       {% endif %}   
-    </div>
-    <div style="padding: 10px;" class="image">       
       {% if image %}  
+    <div style="padding: 10px;" class="image">       
       <span class="imagea" style="font-weight: 700;font-size: 25px;">IMAGE LINK</span>
       <br>
       <br>
@@ -331,15 +285,10 @@ active
         {% for i in image %} <a class="imageb" href="{{i}}" target="_blank"> {{i}} </a> <br> {% endfor %} 
       </span>
       <br>
-      {% else %}  
-      <span class="imagea" style="font-weight: 700;font-size: 25px;">IMAGE LINK</span>
-        <span class="imagec" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;text-transform: uppercase;">
-          Image Link Is Absent
-        </span>
+      </div>
       {% endif %}
-    </div>
-    <div style="padding: 10px;" class="div">
       {% if div %}  
+    <div style="padding: 10px;" class="div">
       <span class="diva" style="font-weight: 700;font-size: 25px;">DIVISION TEXT </span>
     <br>
     <br>
@@ -347,16 +296,11 @@ active
       {% for i in div %}  {{i}} <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="diva" style="font-weight: 700;font-size: 25px;">DIVISION TEXT</span><br><br>
-      <span class="divc" style="text-align: center;font-size: 20px;">
-        division TEXT Is Absent
-      </span>
-    {% endif %}
     </div>
+    {% endif %}
       <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
-    <div style="padding: 10px;" class="divtag">
       {% if divtag %}  
+    <div style="padding: 10px;" class="divtag">
       <span class="divtaga" style="font-weight: 700;font-size: 25px;">DIVISION TAG </span>
     <br>
     <br>
@@ -364,18 +308,13 @@ active
       {% for i in divtag %}  {{i}} <br> <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="divtaga" style="font-weight: 700;font-size: 25px;">DIVISION TAG</span><br><br>
-      <span class="divtagc" style="text-align: center;font-size: 20px;">
-          Division TAG Is Absent
-      </span>
-    {% endif %}
     </div> 
+    {% endif %}
       <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
 
             <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if alltagnames %}  
     <div style="padding: 10px;" class="alltag">
-      {% if alltagnames %}  
       <span class="alltaga" style="font-weight: 700;font-size: 25px;"> ALL TAG NAMES </span>
     <br>
     <br>
@@ -383,20 +322,15 @@ active
       {% for i in alltagnames %}  {{i}} <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="alltaga" style="font-weight: 700;font-size: 25px;">ALL TAG NAMES</span><br><br>
-      <span class="alltagc" style="text-align: center;font-size: 20px;">
-          All TAGs Names are Absent
-      </span>
+    </div>
     {% endif %}
-    </div> 
       <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
 
 
 
             <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if title %}  
             <div style="padding: 10px;" class="source">
-              {% if title %}  
               <span class="sourcea" style="font-weight: 700;font-size: 25px;"> TITLE NAME </span>
             <br>
             <br>
@@ -404,18 +338,13 @@ active
               {% for i in title %}  {{i}} <br> {% endfor %} 
             </span>
             <br>
-            {% else %}  
-            <span class="sourcea" style="font-weight: 700;font-size: 25px;">TITLE NAME</span><br><br>
-              <span class="sourcec" style="text-align: center;font-size: 20px;">
-                TITLE NAME IS Absent
-              </span>
+            </div>
             {% endif %}
-            </div> 
               <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
 
             <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if html %}  
     <div style="padding: 10px;" class="html">
-      {% if html %}  
       <span class="htmla" style="font-weight: 700;font-size: 25px;">HTML TAG </span>
     <br>
     <br>
@@ -423,18 +352,13 @@ active
       {% for i in html %}  {{i}} <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="htmla" style="font-weight: 700;font-size: 25px;">HTML TAG</span><br><br>
-      <span class="htmlc" style="text-align: center;font-size: 20px;">
-          HTML TAG Is Absent
-      </span>
+    </div>
     {% endif %}
-    </div> 
       <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
 
             <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if body %}  
     <div style="padding: 10px;" class="body">
-      {% if body %}  
       <span class="bodya" style="font-weight: 700;font-size: 25px;">BODY TAG </span>
     <br>
     <br>
@@ -442,18 +366,13 @@ active
       {% for i in body %}  {{i}} <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="bodya" style="font-weight: 700;font-size: 25px;">BODY TAG</span><br><br>
-      <span class="bodyc" style="text-align: center;font-size: 20px;">
-          body tag Is Absent
-      </span>
+    </div>
     {% endif %}
-    </div> 
       <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
       
             <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if classname %}  
     <div style="padding: 10px;" class="class">
-      {% if classname %}  
       <span class="classa" style="font-weight: 700;font-size: 25px;">Class names </span>
     <br>
     <br>
@@ -461,18 +380,13 @@ active
       {% for i in classname %}  {{i}} <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="classa" style="font-weight: 700;font-size: 25px;">Class names</span><br><br>
-      <span class="classc" style="text-align: center;font-size: 20px;">
-          Class names are Absent
-      </span>
-    {% endif %}
     </div> 
+    {% endif %}
       <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
       
             <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if idname %}  
     <div style="padding: 10px;" class="id">
-      {% if idname %}  
       <span class="ida" style="font-weight: 700;font-size: 25px;">id names </span>
     <br>
     <br>
@@ -480,18 +394,13 @@ active
       {% for i in idname %}  {{i}} <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="ida" style="font-weight: 700;font-size: 25px;">id names</span><br><br>
-      <span class="idc" style="text-align: center;font-size: 20px;">
-          id names are Absent
-      </span>
+    </div>
     {% endif %}
-    </div> 
       <!--ONE BATCH ONE BATCH ONE BATCH ONE r67ktrl7BATCH ONE BATCH ONE BAr576l8l;6TCH ONE BATCH ONE BATCH ONE BATCH ONE Br565tl6tyl;tATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
       
             <!--ONE BATCH ONE eu6rBATCH ONE BATCH ONEr65t7lt BATCH ONE BATCH ONE BATCH O57686y78lNE BATCH ONE BATCH ONE 5t6l8l6lo6yBATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if strong %}  
     <div style="padding: 10px;" class="b">
-      {% if strong %}  
       <span class="ba" style="font-weight: 700;font-size: 25px;">STRONG TEXT </span>
     <br>
     <br>
@@ -499,18 +408,13 @@ active
       {% for i in strong %}  {{i}} <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="ba" style="font-weight: 700;font-size: 25px;">STRONG TEXT</span><br><br>
-      <span class="bc" style="text-align: center;font-size: 20px;">
-        STRONG TEXT IS Absent
-      </span>
+    </div>
     {% endif %}
-    </div> 
       <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
       
             <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if em %}  
     <div style="padding: 10px;" class="em">
-      {% if em %}  
       <span class="ema" style="font-weight: 700;font-size: 25px;">Em text </span>
     <br>
     <br>
@@ -518,18 +422,13 @@ active
       {% for i in em %}  {{i}} <br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="ema" style="font-weight: 700;font-size: 25px;">em text</span><br><br>
-      <span class="emc" style="text-align: center;font-size: 20px;">
-          em text Is Absent
-      </span>
+    </div>
     {% endif %}
-    </div> 
       <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
       
             <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            {% if u %}  
     <div style="padding: 10px;" class="u">
-      {% if u %}  
       <span class="ua" style="font-weight: 700;font-size: 25px;">U TEXT </span>
     <br>
     <br>
@@ -537,16 +436,71 @@ active
       {% for i in u %} <u> {{i}} </u><br> {% endfor %} 
     </span>
     <br>
-    {% else %}  
-    <span class="ua" style="font-weight: 700;font-size: 25px;">U TEXT</span><br><br>
-      <span class="uc" style="text-align: center;font-size: 20px;">
-          U TEXT Is Absent
-      </span>
+    </div>
     {% endif %}
-    </div> 
+    <br>
+    {% if h1 and h2 and h3 and h4 and h5 and h6 and p and an and al and image and div and divtag and sourceurl and alltagnames and html and body and classname and idname and strong and em and u and linktag and styletag and scripttag and linksrc and stylesrc and scriptsrc and title %}
+    <h1>Sorry No results</h1>
+    {% endif %}
   </div>
     </div>
-
+    <style>
+      .imagesdisplayed{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 50px;
+        width: 100% !important;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        box-shadow: 0 0 8px 5px #b421fe4b;
+        margin-top: 60px;
+      }
+      .imagesdisplayed a{
+        margin: 5px;
+      }
+      .imagesdisplayed img{
+        width: 100% !important;
+        height: 100%;
+        box-shadow: 0 0 10px 5px rgb(0, 0,0,0.1);
+        transition: 0.5s;
+      }
+      .imagesdisplayed img:hover{
+        transition: 0.5s;
+        box-shadow: 0 0 10px 5px rgb(0, 0,0,0.2);
+      }
+      
+      .heading-picture{
+        font-size: 26px;
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        padding-top:    25px;
+        padding-bottom: 25px;
+        width: 100%;
+      }
+      @media(max-width:425px){
+        .imagesdisplayed{
+        width: 90% !important;
+        box-shadow: none;
+        position: relative;
+        top: -60px;
+      }
+      .imagesdisplayed a{
+        margin: 5px;
+      }
+      .imagesdisplayed img{
+        box-shadow: none;
+        box-shadow: 0 0 1px 1.5px rgb(170, 0, 255);
+      }
+      .heading-picture{
+        color: white !important;
+        }
+      }
+    </style>
     {% if image %}
     <div class="imagesdisplayed">
 
@@ -559,10 +513,8 @@ active
     {% endif %}
     </div>
 
-{% endif %}
 
 </div>
-
 
 <script>
 //Get the button
