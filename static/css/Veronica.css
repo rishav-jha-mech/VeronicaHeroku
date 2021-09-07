@@ -1,0 +1,675 @@
+@media (max-width: 880px) {
+  .active {
+    color: chartreuse !important;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*CUSTOM SCROLLBAR CSS FROM W3 SCHOOLS*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*CUSTOM SCROLLBAR CSS FROM W3 SCHOOLS*/
+
+/*To all Anchor Tags
+
+  background: url(https://i.pinimg.com/originals/fe/c6/6d/fec66d649cb60a673fc9bee52380c3b1.gif);
+  https://i.pinimg.com/originals/7d/3d/f2/7d3df21a320ecac33bfedce6d85ec42c.gif
+*/
+::-webkit-scrollbar {
+  scroll-behavior: smooth !important;
+}
+@media (max-width: 425px) {
+  .main {
+    min-height: 100vh;
+    background-position: center;
+    background: url(../images/bg-mobi-ver.gif);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .make h1,
+  .result h1 {
+    color: white !important;
+  }
+  .make h2,
+  .result h2 {
+    color: aqua !important;
+    margin-bottom: 20px !important;
+  }
+  .form-check-label {
+    color: white;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+  .result {
+    height: 775.88px;
+    padding: 20px;
+  }
+  .result .results {
+    background: transparent !important;
+    margin-top: 25px;
+    border: none;
+    box-shadow: 0 0 2px 2px rgba(0, 255, 255, 0.404);
+    font-size: 14px;
+    text-overflow: clip;
+  }
+  .forum {
+    flex-direction: column;
+  }
+  .forum input {
+    margin-bottom: 16px;
+  }
+
+  .make .forum {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .make .forum input {
+    width: 100%;
+    outline: none;
+    margin-top: 25px;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    color: aqua;
+    border: 1px solid rgba(255, 255, 255, 0.384);
+  }
+  .make .forum input::placeholder {
+    color: rgba(0, 255, 255, 0.859);
+  }
+
+  .make .forum button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    background-color: none;
+    background: rgba(0, 0, 0, 0.397) !important;
+    border: 0.8px solid rgba(0, 255, 255, 0.397) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px;
+  }
+  .form-check-input:checked {
+    background-color: rgb(39, 39, 255) !important;
+    border-color: rgb(39, 39, 255) !important;
+  }
+  .form-range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem aqua !important;
+  }
+  .form-range:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem aqua !important;
+  }
+
+  .form-check-input[type="checkbox"]:indeterminate {
+    background-color: rgb(39, 39, 255) !important;
+    border-color: rgb(39, 39, 255) !important;
+  }
+
+  .result button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px 10px 25px;
+    outline: none;
+    background-color: none;
+    background-image: none;
+    background: black !important;
+    border: 0.8px solid rgba(0, 255, 255, 0.397) !important;
+    border: 0.8px solid aqua;
+    color: white;
+    font-size: 16px !important;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  .form-switch .form-check-input {
+    background-color: white;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: thistle;
+}
+
+.main {
+  min-height: 100vh;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3% 10% 3% 10%;
+}
+.make {
+  min-height: 775.88px;
+  padding: 35px;
+  margin: 20px;
+  width: 100%;
+  box-shadow: 0 0 8px 5px #b421fe4b;
+  padding-bottom: 30px;
+}
+.result {
+  min-height: 775.88px;
+  padding: 35px;
+  margin: 20px;
+  width: 100%;
+  box-shadow: 0 0 8px 5px #b421fe4b;
+  word-wrap: break-word;
+}
+.main h1 {
+  padding-top: 10px;
+  padding-bottom: 45px;
+  color: #b621fe;
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.22);
+}
+.make h2 {
+  font-weight: 500;
+  font-size: 25px;
+  color: #b621fe;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.22);
+}
+.make .forum {
+  display: flex;
+  margin-bottom: 40px;
+}
+.make .forum input {
+  width: 100%;
+  padding: 10px 25px 10px 25px;
+  outline: none;
+  margin-right: 10px;
+}
+.make .forum button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px 10px 25px;
+  outline: none;
+  background-color: #1fd1f9;
+  border-radius: 7px;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+/*FORM CHECK SWITCHES IMPORTED FROM BOOTSTRP CSS*/
+.form-check .form-check-input {
+  float: left;
+  margin-left: -1.5em;
+}
+.form-check-input {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}
+.form-check-input[type="checkbox"] {
+  border-radius: 0.25em;
+}
+.form-check-input[type="radio"] {
+  border-radius: 50%;
+  padding: 10px;
+}
+.form-check-input:active {
+  filter: brightness(90%);
+}
+.form-check-input:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-check-input:checked {
+  background-color: #b621fe;
+  border-color: #b621fe;
+}
+.form-check-input:checked[type="checkbox"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+.form-check-input:checked[type="radio"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}
+.form-check-input[type="checkbox"]:indeterminate {
+  background-color: #b621fe;
+  border-color: #b621fe;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+.form-check-input:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+.form-check-input:disabled ~ .form-check-label,
+.form-check-input[disabled] ~ .form-check-label {
+  opacity: 0.5;
+}
+.form-switch {
+  padding-left: 2.5em;
+}
+.form-switch .form-check-input {
+  width: 2em;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+  background-position: left center;
+  border-radius: 2em;
+  transition: background-position 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-switch .form-check-input {
+    transition: none;
+  }
+}
+.form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+}
+.form-switch .form-check-input:checked {
+  background-position: right center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+.form-check-inline {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.btn-check:disabled + .btn,
+.btn-check[disabled] + .btn {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.65;
+}
+.form-range {
+  width: 100%;
+  height: 1.5rem;
+  padding: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.form-range:focus {
+  outline: 0;
+}
+.form-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-range::-moz-focus-outer {
+  border: 0;
+}
+.form-check-input {
+  clear: left;
+}
+
+.form-switch.form-switch-sm {
+  margin-bottom: 0.5rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-sm .form-check-input {
+  height: 1rem;
+  width: calc(1rem + 0.75rem);
+  border-radius: 2rem;
+}
+
+.form-switch.form-switch-md {
+  margin-bottom: 1rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-md .form-check-input {
+  height: 1.5rem;
+  width: calc(2rem + 0.75rem);
+  border-radius: 3rem;
+}
+
+.form-switch.form-switch-lg {
+  margin-bottom: 1.5rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-lg .form-check-input {
+  height: 2rem;
+  width: calc(3rem + 0.75rem);
+  border-radius: 4rem;
+}
+
+.form-switch.form-switch-xl {
+  margin-bottom: 2rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-xl .form-check-input {
+  height: 2.5rem;
+  width: calc(4rem + 0.75rem);
+  border-radius: 5rem;
+}
+
+/*FORM CHECK SWITCHES IMPORTED FROM BOOTSTRP CSS*/
+.col {
+  display: flex;
+  width: 45%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.col1 {
+  margin-right: 8px;
+}
+.col2 {
+  margin-left: 8px;
+}
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (max-width: 425px) {
+  .col {
+    border-top: 1px solid rgba(0, 255, 255, 0.363);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.363);
+  }
+}
+@media (max-width: 900px) {
+  .table {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    padding-top: 20px;
+  }
+  .col1 {
+    margin: 0;
+  }
+  .col2 {
+    margin: 0;
+  }
+}
+.form-check-input {
+  margin-right: 10px;
+}
+.form-check-label {
+  font-weight: 600;
+}
+.result h1 {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.22);
+}
+.result h2 {
+  font-weight: 500;
+  font-size: 25px;
+  color: #b621fe;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.22);
+  text-transform: capitalize;
+  margin-bottom: 50px;
+}
+.result .results {
+  width: 100%;
+  outline: none;
+  height: auto;
+  background: rgba(255, 230, 230, 1);
+  word-wrap: break-word;
+}
+.result button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px 10px 25px;
+  outline: none;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.result .alignright {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 5px;
+  padding-right: 10px;
+  margin-bottom: 18px;
+}
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+  }
+  .make {
+    width: 100%;
+    box-shadow: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.062);
+    height: auto;
+  }
+  .result {
+    width: 100%;
+    box-shadow: none;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .make h1,
+  .result h1 {
+    font-size: 40px;
+    text-shadow: none;
+    font-weight: 800;
+    text-align: center;
+  }
+  .make h2,
+  .result h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .result h1 {
+    letter-spacing: 5px;
+    font-size: 50px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 400px) {
+  .make .forum button {
+    padding: 10px 25px 10px 25px;
+    color: white;
+    border-radius: 6px;
+  }
+  .make {
+    padding-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .result {
+    padding-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 527px) {
+  .block2 {
+    display: block;
+  }
+  .make h1,
+  .result h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 810px) {
+  #block1 {
+    display: none;
+  }
+}
+@media (max-width: 470px) {
+  #block1 {
+    display: none;
+  }
+}
+@media (max-width: 335px) {
+  #block1 {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .navbar .inner .navLinks a {
+    margin-bottom: 50px;
+    color: aqua;
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .navbar .inner .navLinks a:hover {
+    color: chartreuse;
+  }
+  @media (max-width: 425px) {
+    .table {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  #nav_links {
+    display: none;
+  }
+}
+#block1 {
+  display: none;
+}
+
+.abr {
+  color: #ff156f;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.form-check-label {
+  text-transform: capitalize;
+}
+@media (max-width: 550px) {
+  .make {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 425px) {
+  .make {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-width: 425px) {
+  .abr {
+    color: #5656ff;
+    font-size: 10px;
+  }
+  .table {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .main {
+    margin: 0px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .main {
+    margin: 2%;
+  }
+}
+
+@media (max-width: 390px) {
+  .table {
+    padding: 0;
+    margin: 0;
+  }
+  .abr {
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  .rowhead {
+    color: lightskyblue !important;
+  }
+}
+
+#myBtn {
+  display: none;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 900;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #7f00ff, #e100ff);
+  color: white;
+}
+.fa-chevron-up {
+  font-size: 18px;
+  padding: 12px;
+}
+@media (max-width: 425px) {
+  #mybtn {
+    padding: 0 !important;
+  }
+  .fa-chevron-up {
+    font-size: 12px;
+  }
+}
+#scrappy {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.397);
+}
+#scrappy:focus {
+  background: #ff156f;
+}

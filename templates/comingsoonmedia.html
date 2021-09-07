@@ -1,204 +1,33 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} Veronica | Media Scrap {% endblock title %}
 
-{% block title %}
-Veronica | Media Scrap
-{% endblock title %}
+{% block activelink3 %} active {% endblock activelink3 %} {% block body%}
+<link rel="stylesheet" href="{% static 'css/ComingSoonFounder.css' %}">
 
-{% block activelink3 %}
-active
-{% endblock activelink3 %}
-
-{% block outstyle %}
-
-<style>
-    
-    .body {
-
-  background: black;
-  color: #fff;
-  height: 100vh;
-}
-
-@media(max-width:600px){
-    .body{
-        
-  background: url(https://preview.redd.it/0bb6dqsiab451.gif?s=b0c65596a54a30708da26669da6e79abf3be1680);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position-x: center;
-  background-position-y: center;
-  background-blend-mode: color;
-  background-color: rgba(0, 0, 0, 0.288);
-}
-}
-@keyframes fadeIn {
-  from {top: 20%; opacity: 0;}
-  to {top: 100; opacity: 1;}
-  
-}
-
-@-webkit-keyframes fadeIn {
-  from {top: 20%; opacity: 0;}
-  to {top: 100; opacity: 1;}
-  
-}
-
-.wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  animation: fadeIn 1000ms ease;
-  -webkit-animation: fadeIn 1000ms ease;
-  
-}
-
-h1 {
-  font-size: 60px;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 0;
-  line-height: 1;
-  font-weight: 700;
-}
-
-.dot {
-  color: #4FEBFE;
-}
-
-p {
-  text-align: center;
-  margin: 18px;
-  font-family: 'Muli', sans-serif;
-  font-weight: normal;
-  margin-top: 40px;
-  margin-bottom: 25px;
-  font-size: 18px;
-}
-.me{
-    color: aqua;
-}
-.icons {
-  text-align: center;
-  vertical-align: middle;
-}
-.body .icons .social a i{
-    font-size: 30px;
-    padding: 10px;
-    margin: 8px;
-    transition: 0.5s;
-    color: aqua;
-    border-radius: 50%;
-}
-.body .icons .social a i:hover{
-    background: white;
-    transition: 0.5s;
-    border-radius: 50%;
-    color: #ff156f !important;
-}
-@media(max-width:880px){
-    .active{
-    color: chartreuse !important;   
-}
-
-/*HAMBURGER*/
-    .hiddenbutts{
-        display: block;
-    }
-    .fa-times,.fa-bars{
-        display: block;
-        color: white;
-        font-size: 25px;
-        padding: 5px 12px 5px 12px;
-        border: 1px solid white;
-        background: transparent;
-        border-radius: 5px;
-    }
-/*HAMBURGER*/
-    /*Navbar CSS*/
-    .navbar{
-        padding: 5px;
-    }
-    .navbar h2{
-        font-size: 40px;
-        color: white;
-        font-weight: 500;
-        text-shadow: 3px 3px 5px black;
-        letter-spacing: 2px;
-    }   
-    .navbar .inner{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 8px 20px;
-    }
-    .navbar .inner .navLinks{
-        display: none;
-        top: 76.8px;
-        left: 0;
-        right: 0;
-        position: absolute;
-        height: 90vh;
-        width: 100%;
-        flex-direction: column;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        background: black;
-        position: fixed;            /**/
-    }
-    .navbar .inner .navLinks a{
-        margin-bottom: 50px;
-        color: aqua;
-        font-weight: 700;
-        font-size: 25px;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-    .navbar .inner .navLinks a:hover{
-        color: chartreuse;
-    }
-    /*Navbar CSS*/
-}
-</style>
-{% endblock outstyle %}
-
-       {% block body %}
-    <div id="bgone" class="body">
-    <div class="wrapper">
-        <h1 style="text-transform: uppercase;text-align: center;">coming soon<span class="dot">.</span></h1>
-        <p>Contact The Founder - <span class="me">Rishav Jha </span></p>
-        <div class="icons">
-            <div class="social">
-                <a href="https://www.linkedin.com/in/rishav-jha-549b45203" target="_blank"><i class="fab fa-linkedin-in">    </i></a>
-                <a href="https://github.com/rishav-jha-mech" target="_blank"><i class="fab fa-github">         </i></a>
-                <a href="https://web.whatsapp.com/send?text=Hi%20Rishav%2c%20I%20came%20here%20from%20your%20Veronica%20the%20webscraper%20website&phone=917439876937" target="_blank"><i class="fab fa-whatsapp"> </i></a>
-
-                </div>
-        </div>
-       </div>
+<div id="bgone" class="body">
+  <div class="wrapper">
+    <h1 style="text-transform: uppercase; text-align: center">
+      coming soon<span class="dot">.</span>
+    </h1>
+    <p>Contact The Founder - <span class="me">Rishav Jha </span></p>
+    <div class="icons">
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/rishav-jha-549b45203"
+          target="_blank"
+          ><i class="fab fa-linkedin-in"> </i
+        ></a>
+        <a href="https://github.com/rishav-jha-mech" target="_blank"
+          ><i class="fab fa-github"> </i
+        ></a>
+        <a
+          href="https://web.whatsapp.com/send?text=Hi%20Rishav%2c%20I%20came%20here%20from%20your%20Veronica%20the%20webscraper%20website&phone=917439876937"
+          target="_blank"
+          ><i class="fab fa-whatsapp"> </i
+        ></a>
+      </div>
     </div>
-       {% endblock body %}
-
-       
-{% block script %}
-
-document.getElementById('cross').style.display= "none";
-function show(){
-    document.getElementById('nav_links').style.display= "flex";
-    document.getElementById('bgone').style.display= "none";
-    document.getElementById('ham').style.display= "none";
-    document.getElementById('cross').style.display= "block";
-}
-function hide(){
-    document.getElementById('nav_links').style.display= "none";
-    document.getElementById('bgone').style.display= "";
-    document.getElementById('ham').style.display= "block";
-    document.getElementById('cross').style.display= "none";
-}
-function link(){
-    document.getElementById('nav_links').style.display= "none";
-}
-
-
-{% endblock script %}
+  </div>
+</div>
+{% endblock body %}

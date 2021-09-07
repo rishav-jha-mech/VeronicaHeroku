@@ -7,9 +7,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-yk6ozt#r0re#yf(0$ahjo+&wlup@3pvj4vi4eg$f=3t^4^nbxz'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','https:rj-veronica.herokuapp.com']
+ALLOWED_HOSTS = ['https:rj-veronica.herokuapp.com','*']
 
 
 INSTALLED_APPS = [
@@ -113,8 +113,28 @@ MEDIA_URL= 'images/'
 STATICFILES_DIRS=[   
     os.path.join(BASE_DIR,'static')
 ]
-MEDIA_ROOT = os.path.join(BASE_DIR,'static/assets')
+MEDIA_ROOT = os.path.join(BASE_DIR,'')
 
 # THIS IS ALSO FOR HEROKU ONLY
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+
+# Used For Debugging When Debug = False
+
+import logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}

@@ -1,0 +1,157 @@
+@media (max-width: 880px) {
+  .active {
+    color: chartreuse !important;
+  }
+}
+.body {
+  background: black;
+  color: #fff;
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .body {
+    background: url(https://i.pinimg.com/originals/bc/55/51/bc5551ac237a9ef4d8e9575662f2e106.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes fadeIn {
+  from {
+    top: 20%;
+    opacity: 0;
+  }
+  to {
+    top: 100;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    top: 20%;
+    opacity: 0;
+  }
+  to {
+    top: 100;
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  animation: fadeIn 1000ms ease;
+  -webkit-animation: fadeIn 1000ms ease;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.dot {
+  color: #4febfe;
+}
+
+p {
+  text-align: center;
+  margin: 18px;
+  font-family: "Muli", sans-serif;
+  font-weight: normal;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+.me {
+  color: aqua;
+}
+.icons {
+  text-align: center;
+  vertical-align: middle;
+}
+.body .icons .social a i {
+  font-size: 30px;
+  padding: 10px;
+  margin: 8px;
+  transition: 0.5s;
+  color: aqua;
+  border-radius: 50%;
+}
+.body .icons .social a i:hover {
+  background: white;
+  transition: 0.5s;
+  border-radius: 50%;
+  color: #ff156f !important;
+}
+@media (max-width: 880px) {
+  /*HAMBURGER*/
+  .hiddenbutts {
+    display: block;
+  }
+  .fa-times,
+  .fa-bars {
+    display: block;
+    color: white;
+    font-size: 25px;
+    padding: 5px 12px 5px 12px;
+    border: 1px solid white;
+    background: transparent;
+    border-radius: 5px;
+  }
+  /*HAMBURGER*/
+  /*Navbar CSS*/
+  .navbar {
+    padding: 5px;
+  }
+  .navbar h2 {
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+    text-shadow: 3px 3px 5px black;
+    letter-spacing: 2px;
+  }
+  .navbar .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+  }
+  .navbar .inner .navLinks {
+    display: none;
+    top: 76.8px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: black;
+    position: fixed; /**/
+  }
+  .navbar .inner .navLinks a {
+    margin-bottom: 50px;
+    color: aqua;
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .navbar .inner .navLinks a:hover {
+    color: chartreuse;
+  }
+  /*Navbar CSS*/
+}

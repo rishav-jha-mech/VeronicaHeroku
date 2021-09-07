@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*CUSTOM SCROLLBAR CSS FROM W3 SCHOOLS*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+/*CUSTOM SCROLLBAR CSS FROM W3 SCHOOLS*/
+
+/*To all Anchor Tags*/
+a{
+    text-decoration: none;
+    color: thistle;
+}
+/*To all Anchor Tags*/
+
+/*Navbar CSS*/
+.navbar{
+    padding: 5px;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(30deg, #1fd1f9 0%, #b621fe 74%);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.101);
+}
+.navbar h2{
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+    text-shadow: 3px 3px 5px black;
+    letter-spacing: 2px;
+}   
+.navbar .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+}
+.navbar .inner .navLinks{
+    display: flex;
+    align-items: center;
+}
+.navbar .inner .navLinks a{
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: 12px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+.navbar .inner .navLinks a:hover {
+    color: aqua;
+}
+/*Navbar CSS*/
+
+/*bg1*/
+.bg1{
+    padding: 0.8% 5% 0 5%;
+    background: rgba(153, 153, 153, 0.048);
+    min-height: 700px;
+    overflow-x: hidden;
+}
+/*head*/
+.bg1 .head{
+    padding: 20px;
+}
+.bg1 .head h1{
+    font-size: 45px;
+    font-weight: 700;
+}
+.bg1 .head p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+/*head*/
+
+/*ROW 1*/
+.bg1 img{
+    width: 700px;
+    height: 500px;
+    padding: 35px;
+    padding-top: 0;
+}
+.bg1 .row{
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+}
+.bg1 .row .content{
+    text-align: center;
+}
+.bg1 .row .content h1{
+    margin-top: 10px;
+}
+.bg1 .row .content p{
+    margin: 20px;
+}
+.bg1 .twoButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg1 .twoButtons a{
+    padding: 10px 15px 10px 15px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 6px;
+}
+.bg1 .twoButtons a:nth-child(1){
+    margin-right: 25px;
+    background: linear-gradient(45deg, #7f00ff, #e100ff);
+    letter-spacing: 0.5px;
+    border: 2px solid transparent;
+}
+.bg1 .twoButtons a:nth-child(2){
+    border: 2px solid #7f00ff;
+    color: #7f00ff;
+}
+
+#r3 img{
+    width: 50%;
+    margin-right: 7%;
+}
+#r3 .content h1{
+    margin-top: 25px;
+}
+#r3 .content p{
+    line-height: 40px;
+    font-size: 18px;
+}
+#r1 img{
+    width: 90%;
+}
+/*ROW 1*/
+
+/*bg1*/
+@media(max-width:450px){
+    #block{
+        display: block;
+    }
+}
+@media(max-width:1381px){
+    
+    .bg1{
+        padding: 1% 12% 0 12%;
+    }
+    .row{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media(max-width:1200px){
+    .navbar{
+        padding: 5px;
+    }
+    .navbar h2{
+        font-size: 35px;
+    }
+    .bg1{
+        background: rgba(153, 153, 153, 0.075);
+        min-height: 700px;
+        overflow-x: hidden;
+        padding: 1% 12% 0 12%;
+    }
+    .bg1 .head{
+        padding: 20px;
+    }
+    .bg1 .head h1{
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .bg1 .head p{
+        font-size: 18px;
+        margin-top: 10px;
+        margin-left: 8px;
+    }
+    .bg1 img{
+        width: 100%;
+        padding: 35px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0;
+    }
+    .bg1 .row{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .bg1 .row .content{
+        text-align: center;
+    }
+    .bg1 .row .content h1{
+        margin-top: 10px;
+    }
+    .bg1 .row .content p{
+        margin: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 15px;
+    }
+    #r2{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #r3{
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #r3 img{
+        width: 100% !important;
+        margin-right: 0 !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #r3 .content p{
+        line-height: 25px !important;
+    }
+
+}
+@media(max-width:420px){
+    .navbar h2{
+        font-size: 35px !important;
+    }
+    .navbar .inner{
+        padding: 5px;
+    }
+}
+@media(max-width:600px){
+    .bg1{
+        padding: 1.5% 3% 0 3% ;
+    }
+    #r1 img{
+        height: 300px;
+    }
+    
+    #r2 img{
+        height: 300px;
+    }
+    
+    #r3 img{
+        height: 300px;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    #r1 h1,#r2 h1,#r3 h1{
+        font-size: 24px;
+    }
+}
+.hiddenbutts{
+    display: none;
+}
+/*FOR NAVBAR => */
+@media(max-width:880px){
+/*HAMBURGER*/
+    .hiddenbutts{
+        display: block;
+    }
+    .fa-times,.fa-bars{
+        display: block;
+        color: white;
+        font-size: 25px;
+        padding: 5px 12px 5px 12px;
+        border: 1px solid white;
+        background: transparent;
+        border-radius: 5px;
+    }
+/*HAMBURGER*/
+    /*Navbar CSS*/
+    .navbar{
+        padding: 5px;
+    }
+    .navbar h2{
+        font-size: 40px;
+        color: white;
+        font-weight: 500;
+        text-shadow: 3px 3px 5px black;
+        letter-spacing: 2px;
+    }   
+    .navbar .inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 20px;
+    }
+    .navbar .inner .navLinks{
+        display: none;
+        top: 76.8px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        height: 90vh;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background: black;
+        position: fixed;            /**/
+    }
+    .navbar .inner .navLinks a{
+        margin-bottom: 50px;
+        color: aqua;
+        font-weight: 700;
+        font-size: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .navbar .inner .navLinks a:hover{
+        color: chartreuse;
+    }
+    /*Navbar CSS*/
+}
+/* FOOTER */
+.footer{
+    padding: 15px 0 25px 0;
+    text-align: center;
+    background: black;
+    color: aqua;
+}
+.footer p{
+    padding: 20px;
+    font-size: 22px;
+}
+@media(max-width:730px){
+    .footer p {
+        padding-left:  50px;
+        padding-right: 50px;
+    }
+    .footer p a{
+        display: block;
+        margin-top: 10px;
+    }
+}
+/*FOOTER*/
+@media(max-width:880px){
+    .active{
+    color: chartreuse !important;   
+}
+}
