@@ -11,12 +11,18 @@ active
 
 {% block body %} 
 <link rel="stylesheet" href="{% static './css/Veronica.css' %}">
+{% if messages %}
+    {% for message in messages %}
 
+      <h3 style="font-weight: 500;background-color: orangered;padding: 12px;text-align: center;color: white;">{{ message }} </h3>
+
+    {% endfor %}
+{% endif %}
  <form id="bgone" action="" method="post">
   {% csrf_token %}
     <div id="mains" class="main">
             <div class="make">
-<button class="backtoup" onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fas fa-chevron-up"></i> </button>
+<button type="button" class="backtoup" onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fas fa-chevron-up"></i> </button>
 
         <h1>Enter Your <span class="block2">URL Here</span></h1> 
             <div class="forum">
@@ -161,14 +167,15 @@ active
           </div>
     </div>
 </form>    
-  
+{% if response %}
     <div class="result">
         <h1>Scrapped Material</h1>
         <h2>   based on the options you selected here are the results </h2>
         <div class="alignright"> {% if image %}  <a href="#imagesgall"> <button type="button"> Images </button> </a> {% endif %}</div>
         <div style="text-align: center;" class="results"> 
         <br/>
-          {% if h1 %}
+        {% if results %}
+          {% if h1RES %}
           <div class="h1" style="padding: 10px;">
           <br>
            <span class="h1a" style="font-weight: 700;font-size: 25px;"> H1</span>
@@ -439,10 +446,8 @@ active
     </div>
     {% endif %}
     <br>
-    {% if h1 and h2 and h3 and h4 and h5 and h6 and p and an and al and image and div and divtag and sourceurl and alltagnames and html and body and classname and idname and strong and em and u and linktag and styletag and scripttag and linksrc and stylesrc and scriptsrc and title %}
-    <h1>Sorry No results</h1>
-    {% endif %}
   </div>
+  {% endif %}
     </div>
     <style>
       .imagesdisplayed{
@@ -512,8 +517,7 @@ active
     {% endfor %}
     {% endif %}
     </div>
-
-
+{% endif %}
 </div>
 
 <script>
@@ -528,6 +532,7 @@ function scrollFunction() {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
+    topFunction();
   }
 }
 

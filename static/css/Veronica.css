@@ -177,11 +177,13 @@ a {
   padding-bottom: 30px;
 }
 .result {
-  min-height: 775.88px;
+  min-height: 400px;
   padding: 35px;
   margin: 20px;
   width: 100%;
   box-shadow: 0 0 8px 5px #b421fe4b;
+  display: flex;
+  flex-direction: column;
   word-wrap: break-word;
 }
 .main h1 {
@@ -452,6 +454,7 @@ a {
   height: auto;
   background: rgba(255, 230, 230, 1);
   word-wrap: break-word;
+  flex: 1 !important;
 }
 .result button {
   display: flex;
@@ -1612,4 +1615,10 @@ a {
 }
 #scrappy:focus {
   background: #ff156f;
+}
+
+@media(max-width:880px){
+  .navbar .inner .navLinks {
+    top: 86.8px !important;
+  }
 }

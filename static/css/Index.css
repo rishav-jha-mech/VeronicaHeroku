@@ -32,44 +32,6 @@ a{
     text-decoration: none;
     color: thistle;
 }
-/*To all Anchor Tags*/
-
-/*Navbar CSS*/
-.navbar{
-    padding: 5px;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(30deg, #1fd1f9 0%, #b621fe 74%);
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.101);
-}
-.navbar h2{
-    font-size: 40px;
-    color: white;
-    font-weight: 500;
-    text-shadow: 3px 3px 5px black;
-    letter-spacing: 2px;
-}   
-.navbar .inner{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 20px;
-}
-.navbar .inner .navLinks{
-    display: flex;
-    align-items: center;
-}
-.navbar .inner .navLinks a{
-    font-weight: 500;
-    font-size: 17px;
-    margin-left: 12px;
-    margin-right: 12px;
-    vertical-align: middle;
-}
-.navbar .inner .navLinks a:hover {
-    color: aqua;
-}
-/*Navbar CSS*/
-
 /*bg1*/
 .bg1{
     padding: 0.8% 5% 0 5%;
@@ -244,14 +206,6 @@ a{
     }
 
 }
-@media(max-width:420px){
-    .navbar h2{
-        font-size: 35px !important;
-    }
-    .navbar .inner{
-        padding: 5px;
-    }
-}
 @media(max-width:600px){
     .bg1{
         padding: 1.5% 3% 0 3% ;
@@ -274,93 +228,6 @@ a{
         font-size: 24px;
     }
 }
-.hiddenbutts{
+/* #nav_links{
     display: none;
-}
-/*FOR NAVBAR => */
-@media(max-width:880px){
-/*HAMBURGER*/
-    .hiddenbutts{
-        display: block;
-    }
-    .fa-times,.fa-bars{
-        display: block;
-        color: white;
-        font-size: 25px;
-        padding: 5px 12px 5px 12px;
-        border: 1px solid white;
-        background: transparent;
-        border-radius: 5px;
-    }
-/*HAMBURGER*/
-    /*Navbar CSS*/
-    .navbar{
-        padding: 5px;
-    }
-    .navbar h2{
-        font-size: 40px;
-        color: white;
-        font-weight: 500;
-        text-shadow: 3px 3px 5px black;
-        letter-spacing: 2px;
-    }   
-    .navbar .inner{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 8px 20px;
-    }
-    .navbar .inner .navLinks{
-        display: none;
-        top: 76.8px;
-        left: 0;
-        right: 0;
-        position: absolute;
-        height: 90vh;
-        width: 100%;
-        flex-direction: column;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        background: black;
-        position: fixed;            /**/
-    }
-    .navbar .inner .navLinks a{
-        margin-bottom: 50px;
-        color: aqua;
-        font-weight: 700;
-        font-size: 25px;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-    .navbar .inner .navLinks a:hover{
-        color: chartreuse;
-    }
-    /*Navbar CSS*/
-}
-/* FOOTER */
-.footer{
-    padding: 15px 0 25px 0;
-    text-align: center;
-    background: black;
-    color: aqua;
-}
-.footer p{
-    padding: 20px;
-    font-size: 22px;
-}
-@media(max-width:730px){
-    .footer p {
-        padding-left:  50px;
-        padding-right: 50px;
-    }
-    .footer p a{
-        display: block;
-        margin-top: 10px;
-    }
-}
-/*FOOTER*/
-@media(max-width:880px){
-    .active{
-    color: chartreuse !important;   
-}
-}
+} */

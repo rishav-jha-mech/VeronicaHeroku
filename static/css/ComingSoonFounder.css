@@ -18,7 +18,7 @@
     background-position-x: center;
     background-position-y: center;
     background-blend-mode: color;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 @keyframes fadeIn {
@@ -95,63 +95,9 @@ p {
   border-radius: 50%;
   color: #ff156f !important;
 }
-@media (max-width: 880px) {
-  /*HAMBURGER*/
-  .hiddenbutts {
-    display: block;
-  }
-  .fa-times,
-  .fa-bars {
-    display: block;
-    color: white;
-    font-size: 25px;
-    padding: 5px 12px 5px 12px;
-    border: 1px solid white;
-    background: transparent;
-    border-radius: 5px;
-  }
-  /*HAMBURGER*/
-  /*Navbar CSS*/
-  .navbar {
-    padding: 5px;
-  }
-  .navbar h2 {
-    font-size: 40px;
-    color: white;
-    font-weight: 500;
-    text-shadow: 3px 3px 5px black;
-    letter-spacing: 2px;
-  }
-  .navbar .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 20px;
-  }
+
+@media(max-width:880px){
   .navbar .inner .navLinks {
-    display: none;
-    top: 76.8px;
-    left: 0;
-    right: 0;
-    position: absolute;
-    height: 90vh;
-    width: 100%;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: black;
-    position: fixed; /**/
+    top: 86.8px !important;
   }
-  .navbar .inner .navLinks a {
-    margin-bottom: 50px;
-    color: aqua;
-    font-weight: 700;
-    font-size: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-  .navbar .inner .navLinks a:hover {
-    color: chartreuse;
-  }
-  /*Navbar CSS*/
 }
