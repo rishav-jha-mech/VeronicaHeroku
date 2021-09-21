@@ -242,7 +242,7 @@ a {
     transition: 0.5s;
     animation: navbar-animate 0.3s linear;
     z-index: 100000000000000000000000000;
-    background: #000;
+    background: #333;
     background-attachment: fixed;
   }
   @keyframes navbar-animate{

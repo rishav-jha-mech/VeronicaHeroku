@@ -43,7 +43,7 @@
   .main {
     min-height: 100vh;
     background-position: center;
-    background: url('../images/bg-mobi-ver.gif');
+    background: url('https://i.pinimg.com/originals/7d/3d/f2/7d3df21a320ecac33bfedce6d85ec42c.gif'); /* Apparently our server is much slower to serve this file */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1616,9 +1616,9 @@ a {
 #scrappy:focus {
   background: #ff156f;
 }
-
+/* 
 @media(max-width:880px){
   .navbar .inner .navLinks {
     top: 86.8px !important;
   }
-}
+} */

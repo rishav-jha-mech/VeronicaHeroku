@@ -96,8 +96,9 @@ p {
   color: #ff156f !important;
 }
 
-@media(max-width:880px){
+/* @media(max-width:880px){
   .navbar .inner .navLinks {
     top: 86.8px !important;
   }
-}
+Thanks to google chrome's caching policy this error made its way in here
+} */
