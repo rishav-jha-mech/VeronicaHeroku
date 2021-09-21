@@ -134,6 +134,15 @@ a {
   background-image: linear-gradient(30deg, #1fd1f9 0%, #b621fe 74%);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.101);
 }
+@media(max-width:600px){
+  .navbar{
+    background-image: none !important;
+    background: #1fd1f9 !important;
+  }    
+  .navbar h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.295) !important;
+  }
+}
 .navbar h2 {
   font-size: 40px;
   color: white;
@@ -242,7 +251,7 @@ a {
     transition: 0.5s;
     animation: navbar-animate 0.3s linear;
     z-index: 100000000000000000000000000;
-    background: #333;
+    background: #111;
     background-attachment: fixed;
   }
   @keyframes navbar-animate{
